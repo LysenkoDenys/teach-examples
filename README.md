@@ -4,6 +4,8 @@
 
 ### The application deployed here:
 
+https://teach-examples.vercel.app
+
 <h5>This app allows you:</h5>
 <ul>
 <li>display list of mathematical examples</li>
