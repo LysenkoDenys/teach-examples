@@ -17,7 +17,7 @@ body {
 .button1 {
   padding: 10px;
   border: none;
-  background-color: rgb(57, 77, 46);
+  background-color: rgb(110, 118, 105);
   cursor: pointer;
   color: #fff;
   border-radius: 5px;
@@ -26,7 +26,7 @@ body {
   margin: 10px;
 }
 .button1:hover {
-  background-color: rgb(55, 70, 48);
+  background-color: rgb(95, 100, 90);
   box-shadow: 3px 3px 3px rgba(46, 38, 38, 50%);
 }
 

@@ -13,6 +13,6 @@ https://teach-examples.vercel.app
 
 <p>Sample:</p>
 
-![1475](https://github.com/LysenkoDenys/teach-examples/assets/105970854/d222c7d1-3b76-4926-bd3e-77b1c2ce8999)
+![1475](https://github.com/LysenkoDenys/teach-examples/assets/105970854/de5acae4-8c53-44ad-850b-c9709b9b8612)
 
 <p>Build with vanilla JS and totally adaptive to most popular devices</p>
