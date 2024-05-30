@@ -7,11 +7,13 @@ body {
   background-color: #338c00;
   background-image: url('https://www.transparenttextures.com/patterns/black-linen.png');
   color: #fff;
+  user-select: none; /* Standard */
 }
 
 .container {
   margin-top: 30px;
   text-align: center;
+  margin: 1%;
 }
 
 .button1 {
@@ -62,6 +64,7 @@ input {
   padding: 10px;
   box-shadow: 5px 5px 5px rgba(46, 38, 38, 50%);
   border-radius: 5px;
+  display: inline-block;
 }
 
 .container__examples {

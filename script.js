@@ -28,6 +28,9 @@ btn1Node.addEventListener('click', () => {
   if (!minimum || !maximum || !quantity) {
     alert('some of parameters are not defined');
   }
+  if (quantity > 1000 || maximum > 1000000) {
+    return alert('it is too much for you son...');
+  }
 
   olNode.innerHTML = '';
   randomExamples(minimum, maximum, quantity).map((el) =>
