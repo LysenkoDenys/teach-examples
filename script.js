@@ -1,5 +1,9 @@
 const olNode = document.getElementById('listOfExamples');
 const btn1Node = document.getElementById('generator');
+const btn2Node = document.getElementById('reset');
+const minimumNode = document.getElementById('min');
+const maximumNode = document.getElementById('max');
+const quantityNode = document.getElementById('qty');
 
 function randomExamples(min = 1, max = 20, qty = 10) {
   let arrNew = [];
@@ -18,8 +22,15 @@ function randomExamples(min = 1, max = 20, qty = 10) {
 }
 
 btn1Node.addEventListener('click', () => {
+  const minimum = +minimumNode.value;
+  const maximum = +maximumNode.value;
+  const quantity = +quantityNode.value;
+  if (!minimum || !maximum || !quantity) {
+    alert('some of parameters are not defined');
+  }
+
   olNode.innerHTML = '';
-  randomExamples().map((el) =>
+  randomExamples(minimum, maximum, quantity).map((el) =>
     olNode.insertAdjacentHTML(
       'beforeend',
       `<div class='item-example'>${el}</div>`
@@ -27,4 +38,9 @@ btn1Node.addEventListener('click', () => {
   );
 });
 
-//parameters
+btn2Node.addEventListener('click', () => {
+  minimumNode.value = '';
+  maximumNode.value = '';
+  quantityNode.value = '';
+  olNode.innerHTML = '';
+});
