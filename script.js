@@ -33,10 +33,12 @@ btn1Node.addEventListener('click', () => {
   }
 
   olNode.innerHTML = '';
-  randomExamples(minimum, maximum, quantity).map((el) =>
+  randomExamples(minimum, maximum, quantity).map((el, index) =>
     olNode.insertAdjacentHTML(
       'beforeend',
-      `<div class='item-example'>${el}</div>`
+      `<div class='item-example'><div class='item-example-num'>${
+        index + 1
+      }</div>${el}</div>`
     )
   );
 });

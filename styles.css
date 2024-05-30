@@ -16,10 +16,20 @@ body {
   margin: 1%;
 }
 
+h1 {
+  font-size: 28px;
+  margin: 5px 0;
+}
+
+h2 {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
 .button1 {
-  padding: 10px;
+  padding: 5px 10px;
   border: none;
-  background-color: rgb(110, 118, 105);
+  background-color: rgba(110, 118, 105, 70%);
   cursor: pointer;
   color: #fff;
   border-radius: 5px;
@@ -33,9 +43,9 @@ body {
 }
 
 .button2 {
-  padding: 10px;
+  padding: 5px 10px;
   border: none;
-  background-color: red;
+  background-color: rgba(250, 50, 50, 70%);
   cursor: pointer;
   color: #fff;
   border-radius: 5px;
@@ -58,10 +68,16 @@ input {
   box-shadow: 5px 5px 5px rgba(46, 38, 38, 50%);
 }
 
+.inputs__container {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
 .inputs {
-  margin: 10px;
+  margin: 5px;
   background-color: rgba(127, 116, 116, 60%);
-  padding: 10px;
+  padding: 5px;
   box-shadow: 5px 5px 5px rgba(46, 38, 38, 50%);
   border-radius: 5px;
   display: inline-block;
@@ -85,10 +101,16 @@ input {
   padding: 5px;
   text-align: center;
   box-shadow: 5px 5px 5px rgba(46, 38, 38, 50%);
-  font-size: 36px;
+  font-size: 40px;
+  font-weight: 600;
 }
 
 .item-example:hover {
   background-color: rgba(64, 64, 64, 100%);
   box-shadow: 3px 3px 3px rgba(46, 38, 38, 50%);
+}
+
+.item-example-num {
+  position: absolute;
+  font-size: 9px;
 }
