@@ -22,10 +22,10 @@ function randomExamples(min = 1, max = 20, qty = 10) {
 }
 
 btn1Node.addEventListener('click', () => {
-  const minimum = +minimumNode.value || 1;
-  const maximum = +maximumNode.value || 20;
+  const minimum = +minimumNode.value || 0;
+  const maximum = +maximumNode.value || 21;
   const quantity = +quantityNode.value || 10;
-  if (!minimum || !maximum || !quantity) {
+  if (minimum === '' || !maximum || !quantity) {
     alert('some of parameters are not defined');
   }
   if (quantity > 1000 || maximum > 1000000) {
