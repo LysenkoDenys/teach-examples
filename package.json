@@ -1,0 +1,22 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "https://teach-examples.vercel.app",
+  "main": "script.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LysenkoDenys/teach-examples.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LysenkoDenys/teach-examples/issues"
+  },
+  "homepage": "https://github.com/LysenkoDenys/teach-examples#readme",
+  "dependencies": {
+    "animejs": "^3.2.2"
+  }
+}

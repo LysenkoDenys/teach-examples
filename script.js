@@ -1,3 +1,5 @@
+import anime from './node_modules/animejs/lib/anime.es.js';
+
 const olNode = document.getElementById('listOfExamples');
 const btn1Node = document.getElementById('generator');
 const btn2Node = document.getElementById('reset');
@@ -41,11 +43,30 @@ btn1Node.addEventListener('click', () => {
       }</div>${el}</div>`
     )
   );
+  anime({
+    targets: '.item-example',
+    translateY: [
+      { value: 500, duration: 0 },
+      { value: 0, duration: 2000 },
+    ],
+    delay: function (el, i, l) {
+      return i * 100;
+    },
+  });
 });
 
 btn2Node.addEventListener('click', () => {
+  anime({
+    targets: '.item-example',
+    translateY: [{ value: 500, duration: 2000 }],
+    delay: function (el, i, l) {
+      return i * 100;
+    },
+  });
   minimumNode.value = '';
   maximumNode.value = '';
   quantityNode.value = '';
-  olNode.innerHTML = '';
+  setTimeout(() => {
+    olNode.innerHTML = '';
+  }, 1000);
 });
