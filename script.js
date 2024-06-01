@@ -43,8 +43,8 @@ btn1Node.addEventListener('click', () => {
   );
   anime({
     targets: '.item-example',
-    translateY: [
-      { value: -2000, duration: 0 },
+    translateX: [
+      { value: -1000, duration: 0 },
       { value: 0, duration: 2000 },
     ],
     delay: function (el, i, l) {
@@ -56,7 +56,7 @@ btn1Node.addEventListener('click', () => {
 btn2Node.addEventListener('click', () => {
   anime({
     targets: '.item-example',
-    translateY: [{ value: 2000, duration: 2000 }],
+    translateX: [{ value: 2000, duration: 2000 }],
     delay: function (el, i, l) {
       return i * 100;
     },
