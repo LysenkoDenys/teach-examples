@@ -1,5 +1,3 @@
-import anime from './node_modules/animejs/lib/anime.es.js';
-
 const olNode = document.getElementById('listOfExamples');
 const btn1Node = document.getElementById('generator');
 const btn2Node = document.getElementById('reset');
@@ -46,7 +44,7 @@ btn1Node.addEventListener('click', () => {
   anime({
     targets: '.item-example',
     translateY: [
-      { value: 500, duration: 0 },
+      { value: -500, duration: 0 },
       { value: 0, duration: 2000 },
     ],
     delay: function (el, i, l) {
