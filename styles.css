@@ -4,8 +4,8 @@ body {
   width: 100%;
   padding: 0;
   margin: 0;
-  background-color: #338c00;
-  background-image: url('https://www.transparenttextures.com/patterns/black-linen.png');
+  background-color: #075700;
+  background-image: url('https://www.transparenttextures.com/patterns/graphy.png');
   color: #fff;
   user-select: none; /* Standard */
 }
@@ -26,6 +26,7 @@ h2 {
   margin: 5px 0;
 }
 
+.button0,
 .button1 {
   padding: 5px 10px;
   border: none;
@@ -37,6 +38,7 @@ h2 {
   box-shadow: 5px 5px 5px rgba(46, 38, 38, 50%);
   margin: 10px;
 }
+.button0:hover,
 .button1:hover {
   background-color: rgb(95, 100, 90);
   box-shadow: 3px 3px 3px rgba(46, 38, 38, 50%);
