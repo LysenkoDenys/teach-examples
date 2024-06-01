@@ -103,6 +103,7 @@ input {
   box-shadow: 5px 5px 5px rgba(46, 38, 38, 50%);
   font-size: 40px;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .item-example:hover {

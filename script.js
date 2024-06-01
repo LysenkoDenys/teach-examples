@@ -28,7 +28,7 @@ btn1Node.addEventListener('click', () => {
   if (minimum === '' || !maximum || !quantity) {
     alert('some of parameters are not defined');
   }
-  if (quantity > 1000 || maximum > 1000000) {
+  if (quantity > 100 || maximum > 1000000) {
     return alert('it is too much for you son...');
   }
 
@@ -36,9 +36,9 @@ btn1Node.addEventListener('click', () => {
   randomExamples(minimum, maximum, quantity).map((el, index) =>
     olNode.insertAdjacentHTML(
       'beforeend',
-      `<div class='item-example'><div class='item-example-num'>${
+      `<div class='item-example' id='${
         index + 1
-      }</div>${el}</div>`
+      }'><div class='item-example-num'>${index + 1}</div>${el}</div>`
     )
   );
   anime({
@@ -50,6 +50,33 @@ btn1Node.addEventListener('click', () => {
     delay: function (el, i, l) {
       return i * 100;
     },
+  });
+  //get the answer:
+  const exampleNodes = document.querySelectorAll('.item-example');
+  exampleNodes.forEach((node) => {
+    node.addEventListener('click', function (event) {
+      if (!/=/.test(event.currentTarget.textContent.toString())) {
+        return;
+      }
+      const answer =
+        +event.currentTarget.id > 9
+          ? eval(
+              event.currentTarget.textContent
+                .toString()
+                .slice(2)
+                .replace('=', '')
+                .trim()
+            )
+          : eval(
+              event.currentTarget.textContent
+                .toString()
+                .slice(1)
+                .replace('=', '')
+                .trim()
+            );
+      const example = document.getElementById(event.currentTarget.id);
+      example.innerText = answer;
+    });
   });
 });
 
@@ -66,5 +93,5 @@ btn2Node.addEventListener('click', () => {
   quantityNode.value = '';
   setTimeout(() => {
     olNode.innerHTML = '';
-  }, 1000);
+  }, 2000);
 });
