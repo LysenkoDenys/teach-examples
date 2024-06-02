@@ -19,7 +19,7 @@ function randomExamples0(min = 1, max = 20, qty = 10) {
     } else {
       arrNew.push(`${b} - ${a} = `); //${b - a}
     }
-    [...new Set(arrNew)];
+    arrNew = [...new Set(arrNew)];
   }
   return arrNew;
 }
@@ -105,7 +105,7 @@ function randomExamples1(min = 1, max = 20, qty = 10) {
     } else if (a * b > max && b % a === 0) {
       arrNew.push(`${b} / ${a} = `);
     }
-    [...new Set(arrNew)];
+    arrNew = [...new Set(arrNew)];
   }
   return arrNew;
 }
@@ -133,7 +133,7 @@ btn1Node.addEventListener('click', () => {
   anime({
     targets: '.item-example',
     translateX: [
-      { value: -1000, duration: 0 },
+      { value: 1000, duration: 0 },
       { value: 0, duration: 2000 },
     ],
     delay: function (el, i, l) {
