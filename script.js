@@ -8,18 +8,33 @@ const quantityNode = document.getElementById('qty');
 
 //1
 function randomExamples0(min = 1, max = 20, qty = 10) {
+  const maxTime = 10000; // 10 seconds in milliseconds
+  const startTime = Date.now();
+  let counter = 0;
   let arrNew = [];
   while (arrNew.length < qty) {
-    let a = min + Math.floor(Math.random() * max);
-    let b = min + Math.floor(Math.random() * max);
+    let a = Math.round(min + Math.ceil(Math.random() * max));
+    let b = Math.round(min + Math.ceil(Math.random() * max));
     if (a + b <= max) {
-      arrNew.push(`${a} + ${b} = `); //${a + b}
+      arrNew.push(`${a} + ${b} = `);
     } else if (a > b) {
-      arrNew.push(`${a} - ${b} = `); //${a - b}
+      arrNew.push(`${a} - ${b} = `);
     } else {
-      arrNew.push(`${b} - ${a} = `); //${b - a}
+      arrNew.push(`${b} - ${a} = `);
     }
     arrNew = [...new Set(arrNew)];
+    counter++;
+    // Check elapsed time
+    const currentTime = Date.now();
+    const elapsedTime = currentTime - startTime;
+
+    // Break the loop if it runs for more than 10 seconds
+    if (elapsedTime > maxTime) {
+      alert(
+        'Loop exited after running for more than 10 seconds because qty is greater than distinct variants'
+      );
+      break;
+    }
   }
   return arrNew;
 }
@@ -94,10 +109,13 @@ btn0Node.addEventListener('click', () => {
 
 //2
 function randomExamples1(min = 1, max = 20, qty = 10) {
+  const maxTime = 10000; // 10 seconds in milliseconds
+  const startTime = Date.now();
+  let counter = 0;
   let arrNew = [];
   while (arrNew.length < qty) {
-    let a = min + Math.floor(Math.random() * max);
-    let b = min + Math.floor(Math.random() * max);
+    let a = Math.round(min + Math.ceil(Math.random() * max));
+    let b = Math.round(min + Math.ceil(Math.random() * max));
     if (a * b <= max) {
       arrNew.push(`${a} * ${b} = `);
     } else if (a * b > max && a % b === 0) {
@@ -106,6 +124,18 @@ function randomExamples1(min = 1, max = 20, qty = 10) {
       arrNew.push(`${b} / ${a} = `);
     }
     arrNew = [...new Set(arrNew)];
+    counter++;
+    // Check elapsed time
+    const currentTime = Date.now();
+    const elapsedTime = currentTime - startTime;
+
+    // Break the loop if it runs for more than 10 seconds
+    if (elapsedTime > maxTime) {
+      alert(
+        'Loop exited after running for more than 10 seconds because qty is greater than distinct variants'
+      );
+      break;
+    }
   }
   return arrNew;
 }
@@ -118,7 +148,9 @@ btn1Node.addEventListener('click', () => {
     alert('some of parameters are not defined');
   }
   if (quantity > 100 || maximum > 1000000) {
-    return alert('it is too much for you son...');
+    return alert(
+      'it is too much for you son... max quantity is 100, maximum number is 1 000 000'
+    );
   }
 
   olNode.innerHTML = '';
