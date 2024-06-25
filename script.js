@@ -1,7 +1,10 @@
+import db from './db.js';
+
 const olNode = document.getElementById('listOfExamples');
 const btn0Node = document.getElementById('generator0');
 const btn1Node = document.getElementById('generator1');
 const btn2Node = document.getElementById('reset');
+const btn3Node = document.getElementById('proverb');
 const minimumNode = document.getElementById('min');
 const maximumNode = document.getElementById('max');
 const quantityNode = document.getElementById('qty');
@@ -172,6 +175,7 @@ btn1Node.addEventListener('click', () => {
       return i * 100;
     },
   });
+
   //get the answer:
   const exampleNodes = document.querySelectorAll('.item-example');
   exampleNodes.forEach((node) => {
@@ -210,6 +214,72 @@ btn1Node.addEventListener('click', () => {
   });
 });
 
+//3
+function getRandomProverbs(qty = 10) {
+  const maxTime = 10000; // 10 seconds in milliseconds
+  const startTime = Date.now();
+  let counter = 0;
+  let arrNew = [];
+  while (arrNew.length < qty) {
+    let indexProverb = Math.round(1 + Math.ceil(Math.random() * db.length - 1));
+    arrNew.push(db[indexProverb].proverb || indexProverb);
+    counter++;
+    // Check elapsed time
+    const currentTime = Date.now();
+    const elapsedTime = currentTime - startTime;
+
+    // Break the loop if it runs for more than 10 seconds
+    if (elapsedTime > maxTime) {
+      alert(
+        'Loop exited after running for more than 10 seconds because qty is greater than distinct variants'
+      );
+      break;
+    }
+  }
+  return arrNew;
+}
+
+btn3Node.addEventListener('click', () => {
+  const quantity = +quantityNode.value || 10;
+  if (quantity <= 0) {
+    alert('quantity must be greater than zero');
+  }
+  if (quantity > 100) {
+    return alert('it is too much for you son... max quantity is 100');
+  }
+
+  olNode.innerHTML = '';
+  getRandomProverbs(quantity).map((el, index) =>
+    olNode.insertAdjacentHTML(
+      'beforeend',
+      `<div class='item-example' id='${
+        index + 1
+      }'><div class='item-example-num'>${index + 1}</div>${el}</div>`
+    )
+  );
+  anime({
+    targets: '.item-example',
+    translateX: [
+      { value: 1000, duration: 0 },
+      { value: 0, duration: 2000 },
+    ],
+    delay: function (el, i, l) {
+      return i * 100;
+    },
+  });
+
+  //get the answer:
+  const exampleNodes = document.querySelectorAll('.item-example');
+  exampleNodes.forEach((node) => {
+    node.addEventListener('click', function (event) {
+      const answer = 'find in db by proverb and display the explanation';
+      const example = document.getElementById(event.currentTarget.id);
+      example.innerText = answer;
+    });
+  });
+});
+
+//4
 btn2Node.addEventListener('click', () => {
   anime({
     targets: '.item-example',
@@ -225,5 +295,3 @@ btn2Node.addEventListener('click', () => {
     olNode.innerHTML = '';
   }, 2000);
 });
-
-//set

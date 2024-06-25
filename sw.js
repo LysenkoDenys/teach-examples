@@ -1,7 +1,7 @@
 // sw.js
 
 const CACHE_NAME = 'my-cache-v1';
-const urlsToCache = ['/', 'index.html', 'styles.css', 'script.js'];
+const urlsToCache = ['/', 'index.html', 'styles.css', 'script.js', 'db.js'];
 
 self.addEventListener('install', function (event) {
   // Perform installation steps
