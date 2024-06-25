@@ -54,6 +54,8 @@ btn0Node.addEventListener('click', () => {
   }
 
   olNode.innerHTML = '';
+  olNode.style.display = 'grid';
+
   randomExamples0(minimum, maximum, quantity).map((el, index) =>
     olNode.insertAdjacentHTML(
       'beforeend',
@@ -157,6 +159,8 @@ btn1Node.addEventListener('click', () => {
   }
 
   olNode.innerHTML = '';
+  olNode.style.display = 'grid';
+
   randomExamples1(minimum, maximum, quantity).map((el, index) =>
     olNode.insertAdjacentHTML(
       'beforeend',
@@ -247,6 +251,9 @@ btn3Node.addEventListener('click', () => {
   if (quantity > 100) {
     return alert('it is too much for you son... max quantity is 100');
   }
+
+  olNode.style.display = 'flex';
+  olNode.style.flexDirection = 'column';
 
   olNode.innerHTML = '';
   getRandomProverbs(quantity).map((el, index) =>

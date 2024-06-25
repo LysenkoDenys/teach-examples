@@ -96,27 +96,21 @@ input {
   grid-template-columns: 1fr 1fr;
 }
 
-.item-example {
+.item-example,
+.item-example-proverb {
   background-color: rgba(64, 64, 64, 80%);
   margin: 5px;
   border-radius: 5px;
   padding: 5px;
   text-align: center;
+  line-height: 1.5;
   box-shadow: 5px 5px 5px rgba(46, 38, 38, 50%);
   font-size: 40px;
   font-weight: 600;
   cursor: pointer;
 }
 .item-example-proverb {
-  background-color: rgba(66, 66, 66, 0.8);
-  margin: 5px;
-  border-radius: 5px;
-  padding: 5px 10px;
-  text-align: center;
-  box-shadow: 5px 5px 5px rgba(46, 38, 38, 50%);
   font-size: 30px;
-  font-weight: 600;
-  cursor: pointer;
 }
 
 .item-example:hover,
