@@ -252,13 +252,13 @@ btn3Node.addEventListener('click', () => {
   getRandomProverbs(quantity).map((el, index) =>
     olNode.insertAdjacentHTML(
       'beforeend',
-      `<div class='item-example' id='${
+      `<div class='item-example-proverb' id='${
         index + 1
       }'><div class='item-example-num'>${index + 1}</div>${el}</div>`
     )
   );
   anime({
-    targets: '.item-example',
+    targets: '.item-example-proverb',
     translateX: [
       { value: 1000, duration: 0 },
       { value: 0, duration: 2000 },
@@ -269,12 +269,21 @@ btn3Node.addEventListener('click', () => {
   });
 
   //get the answer:
-  const exampleNodes = document.querySelectorAll('.item-example');
+  //'find in db by proverb and display the explanation'
+  const exampleNodes = document.querySelectorAll('.item-example-proverb');
   exampleNodes.forEach((node) => {
     node.addEventListener('click', function (event) {
-      const answer = 'find in db by proverb and display the explanation';
+      const id = event.currentTarget.id;
+      const proverbText = document
+        .getElementById(id)
+        .innerText.replace(/\d/g, '')
+        .trim();
+      const index = db.findIndex((el) => el.proverb === proverbText);
+      const answer = db[index].meaning;
+
       const example = document.getElementById(event.currentTarget.id);
       example.innerText = answer;
+      example.style.color = 'yellow';
     });
   });
 });

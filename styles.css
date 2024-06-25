@@ -107,8 +107,20 @@ input {
   font-weight: 600;
   cursor: pointer;
 }
+.item-example-proverb {
+  background-color: rgba(66, 66, 66, 0.8);
+  margin: 5px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  text-align: center;
+  box-shadow: 5px 5px 5px rgba(46, 38, 38, 50%);
+  font-size: 30px;
+  font-weight: 600;
+  cursor: pointer;
+}
 
-.item-example:hover {
+.item-example:hover,
+.item-example-proverb:hover {
   background-color: rgba(64, 64, 64, 100%);
   box-shadow: 3px 3px 3px rgba(46, 38, 38, 50%);
 }
