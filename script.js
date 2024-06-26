@@ -298,7 +298,7 @@ btn3Node.addEventListener('click', () => {
 //4
 btn2Node.addEventListener('click', () => {
   anime({
-    targets: '.item-example',
+    targets: '.item-example,.item-example-proverb',
     translateX: [{ value: 2000, duration: 2000 }],
     delay: function (el, i, l) {
       return i * 100;
