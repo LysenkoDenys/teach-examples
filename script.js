@@ -278,19 +278,31 @@ btn3Node.addEventListener('click', () => {
   //get the answer:
   //'find in db by proverb and display the explanation'
   const exampleNodes = document.querySelectorAll('.item-example-proverb');
+
   exampleNodes.forEach((node) => {
+    let isAnswerShowed = false;
+    // Store the original proverb text in a data attribute
+    node.dataset.originalText = node.innerText;
+
     node.addEventListener('click', function (event) {
       const id = event.currentTarget.id;
-      const proverbText = document
-        .getElementById(id)
-        .innerText.replace(/\d/g, '')
-        .trim();
-      const index = db.findIndex((el) => el.proverb === proverbText);
-      const answer = db[index].meaning;
+      isAnswerShowed = !isAnswerShowed;
 
-      const example = document.getElementById(event.currentTarget.id);
-      example.innerText = answer;
-      example.style.color = 'yellow';
+      const example = document.getElementById(id);
+      const originalText = example.dataset.originalText;
+
+      console.log(originalText); //
+      if (isAnswerShowed) {
+        const proverbText2Find = originalText.replace(/\d/g, '').trim();
+        const index = db.findIndex((el) => el.proverb === proverbText2Find);
+        example.innerHTML = `<div class='item-example-num'>${id}</div>${db[index].meaning}</div>`;
+        example.style.color = 'rgb(238, 246, 97)';
+      } else {
+        example.innerHTML = `<div class='item-example-num'>${originalText.match(
+          /^\d+/gm
+        )}</div>${originalText.replace(/\d/g, '').trim()}</div>`;
+        example.style.color = 'rgb(172, 118, 246)';
+      }
     });
   });
 });
