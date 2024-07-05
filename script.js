@@ -256,15 +256,14 @@ elements.btn1Node.addEventListener('click', () => {
 function getRandomProverbs(qty = 10) {
   const maxTime = 10000; // 10 seconds in milliseconds
   const startTime = Date.now();
-  let counter = 0;
-  let arrNew = [];
-  while (arrNew.length < qty) {
+  const proverbsSet = new Set();
+
+  while (proverbsSet.size < qty) {
     let indexProverb = Math.round(1 + Math.ceil(Math.random() * db.length - 1));
-    arrNew.push(db[indexProverb].proverb || indexProverb);
-    counter++;
+    proverbsSet.add(db[indexProverb].proverb);
+
     // Check elapsed time
-    const currentTime = Date.now();
-    const elapsedTime = currentTime - startTime;
+    const elapsedTime = Date.now() - startTime;
 
     // Break the loop if it runs for more than 10 seconds
     if (elapsedTime > maxTime) {
@@ -274,7 +273,7 @@ function getRandomProverbs(qty = 10) {
       break;
     }
   }
-  return arrNew;
+  return [...proverbsSet];
 }
 
 elements.btn3Node.addEventListener('click', () => {

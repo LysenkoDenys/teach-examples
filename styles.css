@@ -103,7 +103,6 @@ input {
   border-radius: 5px;
   padding: 5px;
   text-align: center;
-  line-height: 1.5;
   box-shadow: 5px 5px 5px rgba(46, 38, 38, 50%);
   font-size: 40px;
   font-weight: 600;
@@ -111,6 +110,12 @@ input {
 }
 .item-example-proverb {
   font-size: 30px;
+  text-align: left;
+  padding: 5px 10px;
+}
+
+.item-example-proverb::first-line {
+  line-height: 1.8;
 }
 
 .item-example:hover,
