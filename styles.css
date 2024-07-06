@@ -96,35 +96,35 @@ input {
   grid-template-columns: 1fr 1fr;
 }
 
-.item-example,
-.item-example-proverb {
+.container-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   background-color: rgba(64, 64, 64, 80%);
   margin: 5px;
   border-radius: 5px;
   padding: 5px;
   text-align: center;
   box-shadow: 5px 5px 5px rgba(46, 38, 38, 50%);
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 600;
   cursor: pointer;
 }
+
+.item-example {
+  padding: 5px 10px;
+}
+
 .item-example-proverb {
-  font-size: 30px;
   text-align: left;
   padding: 5px 10px;
 }
 
-.item-example-proverb::first-line {
-  line-height: 1.8;
-}
-
-.item-example:hover,
-.item-example-proverb:hover {
+.container-item:hover {
   background-color: rgba(64, 64, 64, 100%);
   box-shadow: 3px 3px 3px rgba(46, 38, 38, 50%);
 }
 
 .item-example-num {
-  position: absolute;
-  font-size: 8px;
+  font-size: 12px;
 }

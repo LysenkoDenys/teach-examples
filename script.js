@@ -66,13 +66,14 @@ elements.btn0Node.addEventListener('click', () => {
   randomExamples0(minimum, maximum, quantity).map((el, index) =>
     elements.olNode.insertAdjacentHTML(
       'beforeend',
-      `<div class='item-example' id='${
-        index + 1
-      }'><div class='item-example-num'>${index + 1}</div>${el}</div>`
+      `<div class='container-item' id='${index + 1}'>
+      <div class='item-example-num'>${index + 1}</div>
+      <div class='item-example'>${el}</div>
+      </div>`
     )
   );
   anime({
-    targets: '.item-example',
+    targets: '.container-item',
     translateX: [
       { value: -1000, duration: 0 },
       { value: 0, duration: 2000 },
@@ -83,7 +84,7 @@ elements.btn0Node.addEventListener('click', () => {
   });
 
   //get the answer:
-  const exampleNodes = document.querySelectorAll('.item-example');
+  const exampleNodes = document.querySelectorAll('.container-item');
   exampleNodes.forEach((node) => {
     let isAnswerShowed = false;
     // Store the original example text in a data attribute
@@ -121,10 +122,10 @@ elements.btn0Node.addEventListener('click', () => {
                   .replace('=', '')
                   .trim()
               );
-        example.innerHTML = `<div class='item-example-num'>${id}</div>${answer}</div>`;
+        example.innerHTML = `<div class='item-example-num'>${id}</div><div class='item-example'>${answer}</div>`;
         example.style.color = colors.answer;
       } else {
-        example.innerHTML = `<div class='item-example-num'>${id}</div>${originalExample
+        example.innerHTML = `<div class='item-example-num'>${id}</div><div class='item-example'>${originalExample
           .replace(/^\d+/, '')
           .trim()}</div>`;
         example.style.color = colors.visited;
@@ -185,13 +186,14 @@ elements.btn1Node.addEventListener('click', () => {
   randomExamples1(minimum, maximum, quantity).map((el, index) =>
     elements.olNode.insertAdjacentHTML(
       'beforeend',
-      `<div class='item-example' id='${
-        index + 1
-      }'><div class='item-example-num'>${index + 1}</div>${el}</div>`
+      `<div class='container-item' id='${index + 1}'>
+      <div class='item-example-num'>${index + 1}</div>
+      <div class='item-example'>${el}</div>
+      </div>`
     )
   );
   anime({
-    targets: '.item-example',
+    targets: '.container-item',
     translateX: [
       { value: 1000, duration: 0 },
       { value: 0, duration: 2000 },
@@ -202,7 +204,7 @@ elements.btn1Node.addEventListener('click', () => {
   });
 
   //get the answer:
-  const exampleNodes = document.querySelectorAll('.item-example');
+  const exampleNodes = document.querySelectorAll('.container-item');
   exampleNodes.forEach((node) => {
     let isAnswerShowed = false;
     // Store the original example text in a data attribute
@@ -240,10 +242,10 @@ elements.btn1Node.addEventListener('click', () => {
                   .replace('=', '')
                   .trim()
               );
-        example.innerHTML = `<div class='item-example-num'>${id}</div>${answer}</div>`;
+        example.innerHTML = `<div class='item-example-num'>${id}</div><div class='item-example'>${answer}</div>`;
         example.style.color = colors.answer;
       } else {
-        example.innerHTML = `<div class='item-example-num'>${id}</div>${originalExample
+        example.innerHTML = `<div class='item-example-num'>${id}</div><div class='item-example'>${originalExample
           .replace(/^\d+/, '')
           .trim()}</div>`;
         example.style.color = colors.visited;
@@ -292,13 +294,14 @@ elements.btn3Node.addEventListener('click', () => {
   getRandomProverbs(quantity).map((el, index) =>
     elements.olNode.insertAdjacentHTML(
       'beforeend',
-      `<div class='item-example-proverb' id='${
-        index + 1
-      }'><div class='item-example-num'>${index + 1}</div>${el}</div>`
+      `<div class='container-item' id='${index + 1}'>
+      <div class='item-example-num'>${index + 1}</div>
+      <div class='item-example-proverb'>${el}</div>
+      </div>`
     )
   );
   anime({
-    targets: '.item-example-proverb',
+    targets: '.container-item',
     translateX: [
       { value: 1000, duration: 0 },
       { value: 0, duration: 2000 },
@@ -310,7 +313,7 @@ elements.btn3Node.addEventListener('click', () => {
 
   //get the answer:
   //'find in db by proverb and display the explanation'
-  const exampleNodes = document.querySelectorAll('.item-example-proverb');
+  const exampleNodes = document.querySelectorAll('.container-item');
 
   exampleNodes.forEach((node) => {
     let isAnswerShowed = false;
@@ -327,12 +330,12 @@ elements.btn3Node.addEventListener('click', () => {
       if (isAnswerShowed) {
         const proverbText2Find = originalText.replace(/\d/g, '').trim();
         const index = db.findIndex((el) => el.proverb === proverbText2Find);
-        example.innerHTML = `<div class='item-example-num'>${id}</div>${db[index].meaning}</div>`;
+        example.innerHTML = `<div class='item-example-num'>${id}</div><div class='item-example-proverb'>${db[index].meaning}</div>`;
         example.style.color = colors.answer;
       } else {
-        example.innerHTML = `<div class='item-example-num'>${originalText.match(
-          /^\d+/gm
-        )}</div>${originalText.replace(/\d/g, '').trim()}</div>`;
+        example.innerHTML = `<div class='item-example-num'>${id}</div><div class='item-example-proverb'>${originalText
+          .replace(/\d/g, '')
+          .trim()}</div>`;
         example.style.color = colors.visited;
       }
     });
@@ -355,3 +358,7 @@ elements.btn2Node.addEventListener('click', () => {
     elements.olNode.innerHTML = '';
   }, 2000);
 });
+
+// generic random function
+// generic anime
+// generic styles
