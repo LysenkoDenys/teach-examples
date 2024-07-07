@@ -16,72 +16,154 @@ const colors = {
   visited: 'rgb(19, 128, 231)',
 };
 
-//1 addition
-function randomExamples0(min = 1, max = 20, qty = 10) {
+// get random numbers:
+const getRandomInt = (min, max) =>
+  Math.floor(Math.random() * (max - min + 1)) + min;
+// generate examples:
+const generateExamples = (min, max, qty, operation) => {
   const maxTime = 10000; // 10 seconds in milliseconds
   const startTime = Date.now();
-  let counter = 0;
-  let arrNew = [];
-  while (arrNew.length < qty) {
-    let a = Math.round(min + Math.ceil(Math.random() * max));
-    let b = Math.round(min + Math.ceil(Math.random() * max));
-    if (a + b <= max) {
-      arrNew.push(`${a} + ${b} = `);
-    } else if (a > b) {
-      arrNew.push(`${a} - ${b} = `);
-    } else {
-      arrNew.push(`${b} - ${a} = `);
-    }
-    arrNew = [...new Set(arrNew)];
-    counter++;
-    // Check elapsed time
-    const currentTime = Date.now();
-    const elapsedTime = currentTime - startTime;
+  let arrNew = new Set();
 
-    // Break the loop if it runs for more than 10 seconds
-    if (elapsedTime > maxTime) {
+  while (arrNew.size < qty) {
+    const a = getRandomInt(min, max);
+    const b = getRandomInt(min, max);
+    let example;
+
+    switch (operation) {
+      case 'addition':
+        example =
+          a + b <= max
+            ? `${a} + ${b} = `
+            : a > b
+            ? `${a} - ${b} = `
+            : `${b} - ${a} = `;
+        break;
+      case 'multiplication':
+        if (a * b <= max) {
+          example = `${a} * ${b} = `;
+        } else if (a % b === 0) {
+          example = `${a} / ${b} = `;
+        } else if (b % a === 0) {
+          example = `${b} / ${a} = `;
+        }
+        break;
+    }
+
+    if (example) {
+      arrNew.add(example);
+    }
+
+    if (Date.now() - startTime > maxTime) {
       alert(
         'Loop exited after running for more than 10 seconds because qty is greater than distinct variants'
       );
       break;
     }
   }
-  return arrNew;
-}
 
-elements.btn0Node.addEventListener('click', () => {
+  return [...arrNew];
+};
+// default parameters:
+const getParameters = () => {
   const minimum = +elements.minimumNode.value || 0;
   const maximum = +elements.maximumNode.value || 21;
   const quantity = +elements.quantityNode.value || 10;
-  if (minimum === '' || !maximum || !quantity) {
-    alert('some of parameters are not defined');
+
+  if (!maximum || !quantity) {
+    alert('Some of the parameters are not defined');
+    return null;
   }
+
   if (quantity > 100 || maximum > 1000000) {
-    return alert('it is too much for you son...');
+    alert(
+      'It is too much for you son... max quantity is 100, maximum number is 1 000 000'
+    );
+    return null;
   }
+
+  return { minimum, maximum, quantity };
+};
+//item block:
+const getItemBlock = (el, index, blockType) => {
+  return `<div class='container-item' id='${index + 1}'>
+  <div class='item-example-num'>${index + 1}</div>
+  <div class='item-example${
+    blockType === 'example' ? '' : '-proverb'
+  }'>${el}</div>
+  </div>`;
+};
+//animation:
+const getAnimation = (type) => {
+  return anime({
+    targets: '.container-item',
+    translateX: [
+      { value: type === 'addition' ? -1000 : 1000, duration: 0 },
+      { value: 0, duration: 2000 },
+    ],
+    delay: (el, i) => i * 100,
+  });
+};
+//toggle answer:
+const toggleAnswer = (id, isAnswerShowed) => {
+  const example = document.getElementById(id);
+  const originalExample = example.dataset.originalText;
+
+  if (isAnswerShowed) {
+    const answer =
+      id < 10
+        ? eval(
+            event.currentTarget.textContent
+              .toString()
+              .slice(1)
+              .replace('=', '')
+              .trim()
+          )
+        : id >= 10 && id < 100
+        ? eval(
+            event.currentTarget.textContent
+              .toString()
+              .slice(2)
+              .replace('=', '')
+              .trim()
+          )
+        : eval(
+            event.currentTarget.textContent
+              .toString()
+              .slice(3)
+              .replace('=', '')
+              .trim()
+          );
+    example.innerHTML = `<div class='item-example-num'>${id}</div><div class='item-example'>${answer}</div>`;
+    example.style.color = colors.answer;
+  } else {
+    example.innerHTML = `<div class='item-example-num'>${id}</div><div class='item-example'>${originalExample
+      .replace(/^\d+/, '')
+      .trim()}</div>`;
+    example.style.color = colors.visited;
+  }
+};
+
+//1 addition
+elements.btn0Node.addEventListener('click', () => {
+  const params = getParameters();
+  if (!params) return;
 
   elements.olNode.innerHTML = '';
   elements.olNode.style.display = 'grid';
 
-  randomExamples0(minimum, maximum, quantity).map((el, index) =>
+  generateExamples(
+    params.minimum,
+    params.maximum,
+    params.quantity,
+    'addition'
+  ).map((el, index) =>
     elements.olNode.insertAdjacentHTML(
       'beforeend',
-      `<div class='container-item' id='${index + 1}'>
-      <div class='item-example-num'>${index + 1}</div>
-      <div class='item-example'>${el}</div>
-      </div>`
+      getItemBlock(el, index, 'example')
     )
   );
-  anime({
-    targets: '.container-item',
-    translateX: [
-      { value: -1000, duration: 0 },
-      { value: 0, duration: 2000 },
-    ],
-    delay: function (el, i, l) {
-      return i * 100;
-    },
-  });
+  getAnimation('addition');
 
   //get the answer:
   const exampleNodes = document.querySelectorAll('.container-item');
@@ -93,115 +175,32 @@ elements.btn0Node.addEventListener('click', () => {
     node.addEventListener('click', function (event) {
       const id = +event.currentTarget.id;
       isAnswerShowed = !isAnswerShowed;
-
-      const example = document.getElementById(id);
-      const originalExample = example.dataset.originalText;
-
-      if (isAnswerShowed) {
-        const answer =
-          id < 10
-            ? eval(
-                event.currentTarget.textContent
-                  .toString()
-                  .slice(1)
-                  .replace('=', '')
-                  .trim()
-              )
-            : id >= 10 && id < 100
-            ? eval(
-                event.currentTarget.textContent
-                  .toString()
-                  .slice(2)
-                  .replace('=', '')
-                  .trim()
-              )
-            : eval(
-                event.currentTarget.textContent
-                  .toString()
-                  .slice(3)
-                  .replace('=', '')
-                  .trim()
-              );
-        example.innerHTML = `<div class='item-example-num'>${id}</div><div class='item-example'>${answer}</div>`;
-        example.style.color = colors.answer;
-      } else {
-        example.innerHTML = `<div class='item-example-num'>${id}</div><div class='item-example'>${originalExample
-          .replace(/^\d+/, '')
-          .trim()}</div>`;
-        example.style.color = colors.visited;
-      }
+      toggleAnswer(id, isAnswerShowed);
     });
   });
 });
 
 //2 multiplication
-function randomExamples1(min = 1, max = 20, qty = 10) {
-  const maxTime = 10000; // 10 seconds in milliseconds
-  const startTime = Date.now();
-  let counter = 0;
-  let arrNew = [];
-  while (arrNew.length < qty) {
-    let a = Math.round(min + Math.ceil(Math.random() * max));
-    let b = Math.round(min + Math.ceil(Math.random() * max));
-    if (a * b <= max) {
-      arrNew.push(`${a} * ${b} = `);
-    } else if (a * b > max && a % b === 0) {
-      arrNew.push(`${a} / ${b} = `);
-    } else if (a * b > max && b % a === 0) {
-      arrNew.push(`${b} / ${a} = `);
-    }
-    arrNew = [...new Set(arrNew)];
-    counter++;
-    // Check elapsed time
-    const currentTime = Date.now();
-    const elapsedTime = currentTime - startTime;
-
-    // Break the loop if it runs for more than 10 seconds
-    if (elapsedTime > maxTime) {
-      alert(
-        'Loop exited after running for more than 10 seconds because qty is greater than distinct variants'
-      );
-      break;
-    }
-  }
-  return arrNew;
-}
 
 elements.btn1Node.addEventListener('click', () => {
-  const minimum = +elements.minimumNode.value || 0;
-  const maximum = +elements.maximumNode.value || 21;
-  const quantity = +elements.quantityNode.value || 10;
-  if (minimum === '' || !maximum || !quantity) {
-    alert('some of parameters are not defined');
-  }
-  if (quantity > 100 || maximum > 1000000) {
-    return alert(
-      'it is too much for you son... max quantity is 100, maximum number is 1 000 000'
-    );
-  }
+  const params = getParameters();
+  if (!params) return;
 
   elements.olNode.innerHTML = '';
   elements.olNode.style.display = 'grid';
 
-  randomExamples1(minimum, maximum, quantity).map((el, index) =>
+  generateExamples(
+    params.minimum,
+    params.maximum,
+    params.quantity,
+    'multiplication'
+  ).map((el, index) =>
     elements.olNode.insertAdjacentHTML(
       'beforeend',
-      `<div class='container-item' id='${index + 1}'>
-      <div class='item-example-num'>${index + 1}</div>
-      <div class='item-example'>${el}</div>
-      </div>`
+      getItemBlock(el, index, 'example')
     )
   );
-  anime({
-    targets: '.container-item',
-    translateX: [
-      { value: 1000, duration: 0 },
-      { value: 0, duration: 2000 },
-    ],
-    delay: function (el, i, l) {
-      return i * 100;
-    },
-  });
+  getAnimation('multiplication');
 
   //get the answer:
   const exampleNodes = document.querySelectorAll('.container-item');
@@ -213,67 +212,18 @@ elements.btn1Node.addEventListener('click', () => {
     node.addEventListener('click', function (event) {
       const id = +event.currentTarget.id;
       isAnswerShowed = !isAnswerShowed;
-
-      const example = document.getElementById(id);
-      const originalExample = example.dataset.originalText;
-
-      if (isAnswerShowed) {
-        const answer =
-          id < 10
-            ? eval(
-                event.currentTarget.textContent
-                  .toString()
-                  .slice(1)
-                  .replace('=', '')
-                  .trim()
-              )
-            : id >= 10 && id < 100
-            ? eval(
-                event.currentTarget.textContent
-                  .toString()
-                  .slice(2)
-                  .replace('=', '')
-                  .trim()
-              )
-            : eval(
-                event.currentTarget.textContent
-                  .toString()
-                  .slice(3)
-                  .replace('=', '')
-                  .trim()
-              );
-        example.innerHTML = `<div class='item-example-num'>${id}</div><div class='item-example'>${answer}</div>`;
-        example.style.color = colors.answer;
-      } else {
-        example.innerHTML = `<div class='item-example-num'>${id}</div><div class='item-example'>${originalExample
-          .replace(/^\d+/, '')
-          .trim()}</div>`;
-        example.style.color = colors.visited;
-      }
+      toggleAnswer(id, isAnswerShowed);
     });
   });
 });
 
 //3 proverb
 function getRandomProverbs(qty = 10) {
-  const maxTime = 10000; // 10 seconds in milliseconds
-  const startTime = Date.now();
   const proverbsSet = new Set();
 
   while (proverbsSet.size < qty) {
-    let indexProverb = Math.round(1 + Math.ceil(Math.random() * db.length - 1));
+    let indexProverb = Math.floor(Math.random() * db.length);
     proverbsSet.add(db[indexProverb].proverb);
-
-    // Check elapsed time
-    const elapsedTime = Date.now() - startTime;
-
-    // Break the loop if it runs for more than 10 seconds
-    if (elapsedTime > maxTime) {
-      alert(
-        'Loop exited after running for more than 10 seconds because qty is greater than distinct variants'
-      );
-      break;
-    }
   }
   return [...proverbsSet];
 }
@@ -294,24 +244,12 @@ elements.btn3Node.addEventListener('click', () => {
   getRandomProverbs(quantity).map((el, index) =>
     elements.olNode.insertAdjacentHTML(
       'beforeend',
-      `<div class='container-item' id='${index + 1}'>
-      <div class='item-example-num'>${index + 1}</div>
-      <div class='item-example-proverb'>${el}</div>
-      </div>`
+      getItemBlock(el, index, 'proverb')
     )
   );
-  anime({
-    targets: '.container-item',
-    translateX: [
-      { value: 1000, duration: 0 },
-      { value: 0, duration: 2000 },
-    ],
-    delay: function (el, i, l) {
-      return i * 100;
-    },
-  });
+  getAnimation('proverb');
 
-  //get the answer:
+  //get the explanation:
   //'find in db by proverb and display the explanation'
   const exampleNodes = document.querySelectorAll('.container-item');
 
@@ -345,11 +283,9 @@ elements.btn3Node.addEventListener('click', () => {
 //4 reset
 elements.btn2Node.addEventListener('click', () => {
   anime({
-    targets: '.item-example,.item-example-proverb',
+    targets: '.container-item',
     translateX: [{ value: 2000, duration: 2000 }],
-    delay: function (el, i, l) {
-      return i * 100;
-    },
+    delay: (el, i) => i * 100,
   });
   elements.minimumNode.value = '';
   elements.maximumNode.value = '';
@@ -359,6 +295,7 @@ elements.btn2Node.addEventListener('click', () => {
   }, 2000);
 });
 
-// generic random function
-// generic anime
-// generic styles
+//* generic random function
+//* generic anime
+//* generic answer eval
+//* generic styles
