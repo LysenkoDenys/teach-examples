@@ -143,12 +143,41 @@ const toggleAnswer = (id, isAnswerShowed) => {
     example.style.color = colors.visited;
   }
 };
+//timer:
+let timeElapsed = 0;
+let timerInterval;
+const startTimer = () => {
+  timerInterval = setInterval(() => {
+    timeElapsed++;
+    updateTimerDisplay(timeElapsed);
+  }, 1000);
+};
+
+function updateTimerDisplay(time) {
+  const minutes = Math.floor(time / 60);
+  const seconds = time % 60;
+  document.getElementById('timer').textContent = `${padZero(minutes)}:${padZero(
+    seconds
+  )}`;
+}
+
+function padZero(number) {
+  return number < 10 ? `0${number}` : number;
+}
+
+function resetTimer() {
+  clearInterval(timerInterval);
+  timeElapsed = 0;
+  // isRunning = false;
+  document.getElementById('timer').textContent = '00:00';
+}
 
 //1 addition
 elements.btn0Node.addEventListener('click', () => {
   const params = getParameters();
   if (!params) return;
-
+  resetTimer();
+  startTimer();
   elements.olNode.innerHTML = '';
   elements.olNode.style.display = 'grid';
 
@@ -180,12 +209,12 @@ elements.btn0Node.addEventListener('click', () => {
   });
 });
 
-//2 multiplication
-
+//2 multiplication:
 elements.btn1Node.addEventListener('click', () => {
   const params = getParameters();
   if (!params) return;
-
+  resetTimer();
+  startTimer();
   elements.olNode.innerHTML = '';
   elements.olNode.style.display = 'grid';
 
@@ -236,7 +265,8 @@ elements.btn3Node.addEventListener('click', () => {
   if (quantity > 100) {
     return alert('it is too much for you son... max quantity is 100');
   }
-
+  resetTimer();
+  startTimer();
   elements.olNode.style.display = 'flex';
   elements.olNode.style.flexDirection = 'column';
 
@@ -250,7 +280,6 @@ elements.btn3Node.addEventListener('click', () => {
   getAnimation('proverb');
 
   //get the explanation:
-  //'find in db by proverb and display the explanation'
   const exampleNodes = document.querySelectorAll('.container-item');
 
   exampleNodes.forEach((node) => {
@@ -280,8 +309,9 @@ elements.btn3Node.addEventListener('click', () => {
   });
 });
 
-//4 reset
+//4 reset:
 elements.btn2Node.addEventListener('click', () => {
+  resetTimer();
   anime({
     targets: '.container-item',
     translateX: [{ value: 2000, duration: 2000 }],
