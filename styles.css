@@ -119,6 +119,7 @@ input {
 .container-item {
   display: flex;
   flex-direction: column;
+  text-align: center;
   background-color: rgba(64, 64, 64, 80%);
   margin: 5px;
   border-radius: 5px;
@@ -161,13 +162,15 @@ input {
   background-color: rgba(0, 0, 0, 30%);
   opacity: 0%;
   transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 .modal-container.show {
+  pointer-events: auto;
   opacity: 100%;
 }
 
 .modal {
-  background-color: rgba(245, 245, 220, 0.6);
+  background-color: rgba(245, 245, 220, 100%);
   box-shadow: 3px 3px 3px rgba(46, 38, 38, 50%);
   border-radius: 5px;
   width: 200px;
