@@ -1,6 +1,6 @@
-# The teaching examples
+# The teaching examples & proverbs
 
-### The application is dedicated to teach children to manage mathematical operations
+### The application is dedicated to teach children to manage mathematical operations and learn some proverbs
 
 ### The application deployed here:
 
@@ -10,11 +10,13 @@ https://teach-examples.vercel.app
 <ul>
 <li>display list of mathematical examples</li>
 <li>display right answers after click on the example</li>
+<li>display list of proverbs</li>
+<li>display my meaning after click on the proverb</li>
 </ul>
 
 <p>Sample:</p>
 
-![159](https://github.com/LysenkoDenys/teach-examples/assets/105970854/2ccc5132-2d10-47b7-8ac4-a643addaf615)
+![image](https://github.com/LysenkoDenys/teach-examples/assets/105970854/1f588ab6-db86-4044-816d-69609111444f)
 
 <h5>Used API`s and libraries:</h5>
 <ul>

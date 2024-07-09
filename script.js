@@ -9,11 +9,17 @@ const elements = {
   minimumNode: document.getElementById('min'),
   maximumNode: document.getElementById('max'),
   quantityNode: document.getElementById('qty'),
+  timerNode: document.getElementById('timer'),
+  h1Node: document.getElementById('h1'),
+  modalContainerNode: document.getElementById('modal_container'),
+  closeButtonNode: document.getElementById('close'),
 };
 
 const colors = {
   answer: 'rgb(238, 246, 97)',
   visited: 'rgb(19, 128, 231)',
+  runningTimer: 'rgba(127, 116, 116, 60%)',
+  pausedTimer: 'rgba(64, 64, 64, 80%)',
 };
 
 // get random numbers:
@@ -146,12 +152,24 @@ const toggleAnswer = (id, isAnswerShowed) => {
 //timer:
 let timeElapsed = 0;
 let timerInterval;
+let isRunning = false;
+
 const startTimer = () => {
+  // if (isRunning) return;
+  isRunning = true;
+  elements.timerNode.style.backgroundColor = colors.runningTimer;
   timerInterval = setInterval(() => {
     timeElapsed++;
     updateTimerDisplay(timeElapsed);
   }, 1000);
 };
+
+function pauseTimer() {
+  if (!isRunning) return;
+  isRunning = false;
+  clearInterval(timerInterval);
+  elements.timerNode.style.backgroundColor = colors.pausedTimer;
+}
 
 function updateTimerDisplay(time) {
   const minutes = Math.floor(time / 60);
@@ -168,8 +186,8 @@ function padZero(number) {
 function resetTimer() {
   clearInterval(timerInterval);
   timeElapsed = 0;
-  // isRunning = false;
   document.getElementById('timer').textContent = '00:00';
+  elements.timerNode.style.backgroundColor = colors.runningTimer;
 }
 
 //1 addition
@@ -325,7 +343,16 @@ elements.btn2Node.addEventListener('click', () => {
   }, 2000);
 });
 
-//* generic random function
-//* generic anime
-//* generic answer eval
-//* generic styles
+//5 timer:
+elements.timerNode.addEventListener('click', () => {
+  isRunning ? pauseTimer() : startTimer();
+});
+
+//6 cheer:
+elements.h1Node.addEventListener('click', () => {
+  elements.modalContainerNode.classList.add('show');
+});
+
+elements.closeButtonNode.addEventListener('click', () => {
+  elements.modalContainerNode.classList.remove('show');
+});
