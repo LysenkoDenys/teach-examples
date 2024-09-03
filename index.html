@@ -7,6 +7,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <meta
+      name="description"
+      content="exercises for kids to improve counts, reading, life, en and cz skills"
+    />
     <title>examples-to-teach-children</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" type="module" defer></script>
@@ -40,10 +44,18 @@
             <label for="qty">Qty</label>
             <input type="number" placeholder="10" id="qty" min="10" max="100" />
             <br />
-            <button class="button0" id="generator0">sum&sub</button>
-            <button class="button1" id="generator1">multi&div</button>
-            <button class="button1" id="proverb">proverb</button>
-            <button class="button2" id="reset">reset</button>
+            <button class="button0" id="generator0" title="plus&minus" ar>
+              +&-
+            </button>
+            <button class="button1" id="generator1" title="multi&divides">
+              *&/
+            </button>
+            <button class="button1" id="proverb" title="national proverbs">
+              pro
+            </button>
+            <button class="button1" id="en" title="english">en</button>
+            <button class="button1" id="cz" title="check">cz</button>
+            <button class="button2" id="reset" title="reset">&#10227;</button>
           </div>
         </div>
       </div>
@@ -53,6 +65,7 @@
       <div class="modal-container" id="modal_container">
         <div class="modal">
           <div class="modal-header">
+            <p class="modal__title">Добра порада:</p>
             <button class="close" id="close">&#x2715;</button>
           </div>
           <p>Навчайся, розвивайся системно - щодня!</p>
@@ -62,7 +75,7 @@
     </div>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <script src="libs/animejs/lib/anime.min.js"></script>
-    <script>
+    <!-- <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', function () {
           navigator.serviceWorker.register('/sw.js').then(
@@ -80,6 +93,6 @@
           );
         });
       }
-    </script>
+    </script> -->
   </body>
 </html>

@@ -24,3 +24,11 @@ https://teach-examples.vercel.app
 </ul>
 
 <p>Build with vanilla JS and totally adaptive to most popular devices</p>
+
+<p>Todo:</p>
+<ul>
+<li>add english words/ukrainian words</li>
+<li>add cz words/ukrainian words</li>
+<li>add uploading possibility</li>
+<li>ARIA</li>
+</ul>

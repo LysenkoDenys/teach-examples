@@ -52,6 +52,10 @@ h1 {
   cursor: pointer;
 }
 
+label {
+  font-size: 10px;
+}
+
 .button0,
 .button1 {
   padding: 5px 10px;
@@ -79,7 +83,7 @@ h1 {
   border-radius: 5px;
   transition: 0.3s;
   box-shadow: 5px 5px 5px rgba(46, 38, 38, 50%);
-  margin: 10px;
+  margin: 1%;
 }
 .button2:hover {
   background-color: #bd0404;
@@ -88,7 +92,7 @@ h1 {
 
 input {
   border-radius: 5px;
-  padding: 5px;
+  padding: 2px;
   margin: 5px;
   outline: none;
   max-width: 50px;
@@ -188,7 +192,7 @@ input {
 
 .modal-header {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 
 .close {
@@ -212,4 +216,9 @@ input {
 .close:focus {
   background-color: rgb(194, 4, 4);
   font-weight: 400;
+}
+
+.modal__title {
+  font-weight: 600;
+  padding-left: 8px;
 }
