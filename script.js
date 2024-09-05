@@ -1,4 +1,5 @@
 import db from './db.js';
+import dbEn from './dbEn.js';
 
 const elements = {
   olNode: document.getElementById('listOfExamples'),
@@ -6,6 +7,7 @@ const elements = {
   btn1Node: document.getElementById('generator1'),
   btn2Node: document.getElementById('reset'),
   btn3Node: document.getElementById('proverb'),
+  btn4Node: document.getElementById('en'),
   minimumNode: document.getElementById('min'),
   maximumNode: document.getElementById('max'),
   quantityNode: document.getElementById('qty'),
@@ -264,7 +266,7 @@ elements.btn1Node.addEventListener('click', () => {
   });
 });
 
-//3 proverb
+//3.1. proverb:
 function getRandomProverbs(qty = 10) {
   const proverbsSet = new Set();
 
@@ -326,6 +328,72 @@ elements.btn3Node.addEventListener('click', () => {
     });
   });
 });
+
+//!++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//3.2. english:
+function getRandomWords(qty = 10) {
+  const wordsSet = new Set();
+
+  while (wordsSet.size < qty) {
+    let indexWord = Math.floor(Math.random() * dbEn.length);
+    wordsSet.add(dbEn[indexWord].en);
+  }
+  return [...wordsSet];
+}
+
+elements.btn4Node.addEventListener('click', () => {
+  const quantity = +elements.quantityNode.value || 10;
+  if (quantity <= 0) {
+    alert('quantity must be greater than zero');
+  }
+  if (quantity > 100) {
+    return alert('it is too much for you son... max quantity is 100');
+  }
+  resetTimer();
+  startTimer();
+  elements.olNode.style.display = 'flex';
+  elements.olNode.style.flexDirection = 'column';
+
+  elements.olNode.innerHTML = '';
+  getRandomWords(quantity).map((el, index) =>
+    elements.olNode.insertAdjacentHTML(
+      'beforeend',
+      getItemBlock(el, index, 'proverb')
+    )
+  );
+  getAnimation('proverb');
+
+  //get the ua word:
+  const exampleNodes = document.querySelectorAll('.container-item');
+
+  exampleNodes.forEach((node) => {
+    let isAnswerShowed = false;
+    // Store the original proverb text in a data attribute
+    node.dataset.originalText = node.innerText;
+
+    node.addEventListener('click', function (event) {
+      const id = event.currentTarget.id;
+      isAnswerShowed = !isAnswerShowed;
+
+      const example = document.getElementById(id);
+      const originalText = example.dataset.originalText;
+
+      if (isAnswerShowed) {
+        const proverbText2Find = originalText.replace(/\d/g, '').trim();
+        const index = dbEn.findIndex((el) => el.en === proverbText2Find);
+        example.innerHTML = `<div class='item-example-num'>${id}</div><div class='item-example-proverb'>${dbEn[index].ua}</div>`;
+        example.style.color = colors.answer;
+      } else {
+        example.innerHTML = `<div class='item-example-num'>${id}</div><div class='item-example-proverb'>${originalText
+          .replace(/\d/g, '')
+          .trim()}</div>`;
+        example.style.color = colors.visited;
+      }
+    });
+  });
+});
+
+//!++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 //4 reset:
 elements.btn2Node.addEventListener('click', () => {
