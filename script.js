@@ -101,6 +101,15 @@ const getItemBlock = (el, index, blockType) => {
   }'>${el}</div>
   </div>`;
 };
+
+const getItemWordsBlock = (el1, el2, index) => {
+  return `<div class='container-item' id='${index + 1}'>
+  <div class='item-example-num'>${index + 1}</div>
+  <div class='item-example-proverb'>${el1}</div>
+  <div class='item-example-tip'>context: ${el2}</div>
+  </div>`;
+};
+
 //animation:
 const getAnimation = (type) => {
   return anime({
@@ -329,14 +338,13 @@ elements.btn3Node.addEventListener('click', () => {
   });
 });
 
-//!++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //3.2. english:
 function getRandomWords(qty = 10) {
   const wordsSet = new Set();
 
   while (wordsSet.size < qty) {
     let indexWord = Math.floor(Math.random() * dbEn.length);
-    wordsSet.add(dbEn[indexWord].en);
+    wordsSet.add([dbEn[indexWord].en, dbEn[indexWord].context]);
   }
   return [...wordsSet];
 }
@@ -358,7 +366,7 @@ elements.btn4Node.addEventListener('click', () => {
   getRandomWords(quantity).map((el, index) =>
     elements.olNode.insertAdjacentHTML(
       'beforeend',
-      getItemBlock(el, index, 'proverb')
+      getItemWordsBlock(el[0], el[1], index)
     )
   );
   getAnimation('proverb');
@@ -368,7 +376,7 @@ elements.btn4Node.addEventListener('click', () => {
 
   exampleNodes.forEach((node) => {
     let isAnswerShowed = false;
-    // Store the original proverb text in a data attribute
+    // Store the original english word in a data attribute
     node.dataset.originalText = node.innerText;
 
     node.addEventListener('click', function (event) {
@@ -378,22 +386,27 @@ elements.btn4Node.addEventListener('click', () => {
       const example = document.getElementById(id);
       const originalText = example.dataset.originalText;
 
+      const wordText2Find = originalText
+        .replace(/\d/g, '')
+        .replace(/context:.*/, '')
+        .trim();
+      const index = dbEn.findIndex((el) => el.en === wordText2Find);
+
       if (isAnswerShowed) {
-        const proverbText2Find = originalText.replace(/\d/g, '').trim();
-        const index = dbEn.findIndex((el) => el.en === proverbText2Find);
-        example.innerHTML = `<div class='item-example-num'>${id}</div><div class='item-example-proverb'>${dbEn[index].ua}</div>`;
+        example.innerHTML = `<div class='item-example-num'>${id}</div><div class='item-example-proverb'>${dbEn[index].ua}</div><div class='item-example-tip'>association: ${dbEn[index].association}</div>`;
         example.style.color = colors.answer;
       } else {
         example.innerHTML = `<div class='item-example-num'>${id}</div><div class='item-example-proverb'>${originalText
           .replace(/\d/g, '')
-          .trim()}</div>`;
+          .replace(/context:.*/, '')
+          .trim()}</div><div class='item-example-tip'>context:${
+          dbEn[index].context
+        }</div>`;
         example.style.color = colors.visited;
       }
     });
   });
 });
-
-//!++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 //4 reset:
 elements.btn2Node.addEventListener('click', () => {

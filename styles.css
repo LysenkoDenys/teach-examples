@@ -149,6 +149,12 @@ input {
   font-size: 30px;
 }
 
+.item-example-tip {
+  text-align: left;
+  padding: 5px 10px;
+  font-size: 10px;
+}
+
 .container-item:hover {
   background-color: rgba(64, 64, 64, 100%);
   box-shadow: 3px 3px 3px rgba(46, 38, 38, 50%);
