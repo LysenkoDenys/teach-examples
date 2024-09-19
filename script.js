@@ -1,5 +1,6 @@
 import db from './db.js';
 import dbEn from './dbEn.js';
+import dbCz from './dbCz.js';
 
 const elements = {
   olNode: document.getElementById('listOfExamples'),
@@ -8,6 +9,7 @@ const elements = {
   btn2Node: document.getElementById('reset'),
   btn3Node: document.getElementById('proverb'),
   btn4Node: document.getElementById('en'),
+  btn5Node: document.getElementById('cz'),
   minimumNode: document.getElementById('min'),
   maximumNode: document.getElementById('max'),
   quantityNode: document.getElementById('qty'),
@@ -338,7 +340,7 @@ elements.btn3Node.addEventListener('click', () => {
   });
 });
 
-//3.2. english:
+//3.2. en:
 function getRandomWords(qty = 10) {
   const wordsSet = new Set();
 
@@ -408,6 +410,76 @@ elements.btn4Node.addEventListener('click', () => {
   });
 });
 
+//3.3. cz:
+function getRandomWordsCz(qty = 10) {
+  const wordsSet = new Set();
+
+  while (wordsSet.size < qty) {
+    let indexWord = Math.floor(Math.random() * dbCz.length);
+    wordsSet.add([dbCz[indexWord].cz, dbCz[indexWord].context]);
+  }
+  return [...wordsSet];
+}
+
+elements.btn5Node.addEventListener('click', () => {
+  const quantity = +elements.quantityNode.value || 10;
+  if (quantity <= 0) {
+    alert('quantity must be greater than zero');
+  }
+  if (quantity > 100) {
+    return alert('it is too much for you son... max quantity is 100');
+  }
+  resetTimer();
+  startTimer();
+  elements.olNode.style.display = 'flex';
+  elements.olNode.style.flexDirection = 'column';
+
+  elements.olNode.innerHTML = '';
+  getRandomWordsCz(quantity).map((el, index) =>
+    elements.olNode.insertAdjacentHTML(
+      'beforeend',
+      getItemWordsBlock(el[0], el[1], index)
+    )
+  );
+  getAnimation('proverb');
+
+  //get the ua word:
+  const exampleNodes = document.querySelectorAll('.container-item');
+
+  exampleNodes.forEach((node) => {
+    let isAnswerShowed = false;
+    // Store the original english word in a data attribute
+    node.dataset.originalText = node.innerText;
+
+    node.addEventListener('click', function (event) {
+      const id = event.currentTarget.id;
+      isAnswerShowed = !isAnswerShowed;
+
+      const example = document.getElementById(id);
+      const originalText = example.dataset.originalText;
+
+      const wordText2Find = originalText
+        .replace(/\d/g, '')
+        .replace(/context:.*/, '')
+        .trim();
+      const index = dbCz.findIndex((el) => el.cz === wordText2Find);
+
+      if (isAnswerShowed) {
+        example.innerHTML = `<div class='item-example-num'>${id}</div><div class='item-example-proverb'>${dbCz[index].ua}</div><div class='item-example-tip'>association: ${dbCz[index].association}</div>`;
+        example.style.color = colors.answer;
+      } else {
+        example.innerHTML = `<div class='item-example-num'>${id}</div><div class='item-example-proverb'>${originalText
+          .replace(/\d/g, '')
+          .replace(/context:.*/, '')
+          .trim()}</div><div class='item-example-tip'>context:${
+          dbCz[index].context
+        }</div>`;
+        example.style.color = colors.visited;
+      }
+    });
+  });
+});
+
 //4 reset:
 elements.btn2Node.addEventListener('click', () => {
   resetTimer();
@@ -437,3 +509,6 @@ elements.h1Node.addEventListener('click', () => {
 elements.closeButtonNode.addEventListener('click', () => {
   elements.modalContainerNode.classList.remove('show');
 });
+
+// TODO:
+// 1. the same random numbers issue: proverb/en/cz
