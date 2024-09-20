@@ -123,6 +123,7 @@ const getAnimation = (type) => {
     delay: (el, i) => i * 100,
   });
 };
+
 //toggle answer:
 const toggleAnswer = (id, isAnswerShowed) => {
   const example = document.getElementById(id);
@@ -162,6 +163,7 @@ const toggleAnswer = (id, isAnswerShowed) => {
     example.style.color = colors.visited;
   }
 };
+
 //timer:
 let timeElapsed = 0;
 let timerInterval;
@@ -201,6 +203,15 @@ function resetTimer() {
   timeElapsed = 0;
   document.getElementById('timer').textContent = '00:00';
   elements.timerNode.style.backgroundColor = colors.runningTimer;
+}
+
+// utility function to shuffle an array
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
 }
 
 //1 addition
@@ -279,13 +290,8 @@ elements.btn1Node.addEventListener('click', () => {
 
 //3.1. proverb:
 function getRandomProverbs(qty = 10) {
-  const proverbsSet = new Set();
-
-  while (proverbsSet.size < qty) {
-    let indexProverb = Math.floor(Math.random() * db.length);
-    proverbsSet.add(db[indexProverb].proverb);
-  }
-  return [...proverbsSet];
+  const shuffledProverbs = shuffleArray([...db]); // clone and shuffle the array
+  return shuffledProverbs.slice(0, qty).map((item) => item.proverb);
 }
 
 elements.btn3Node.addEventListener('click', () => {
@@ -342,13 +348,8 @@ elements.btn3Node.addEventListener('click', () => {
 
 //3.2. en:
 function getRandomWords(qty = 10) {
-  const wordsSet = new Set();
-
-  while (wordsSet.size < qty) {
-    let indexWord = Math.floor(Math.random() * dbEn.length);
-    wordsSet.add([dbEn[indexWord].en, dbEn[indexWord].context]);
-  }
-  return [...wordsSet];
+  const shuffledWords = shuffleArray([...dbEn]); // clone and shuffle the array
+  return shuffledWords.slice(0, qty).map((item) => [item.en, item.context]);
 }
 
 elements.btn4Node.addEventListener('click', () => {
@@ -411,14 +412,19 @@ elements.btn4Node.addEventListener('click', () => {
 });
 
 //3.3. cz:
-function getRandomWordsCz(qty = 10) {
-  const wordsSet = new Set();
+// function getRandomWordsCz(qty = 10) {
+//   const wordsSet = new Set();
 
-  while (wordsSet.size < qty) {
-    let indexWord = Math.floor(Math.random() * dbCz.length);
-    wordsSet.add([dbCz[indexWord].cz, dbCz[indexWord].context]);
-  }
-  return [...wordsSet];
+//   while (wordsSet.size < qty) {
+//     let indexWord = Math.floor(Math.random() * dbCz.length);
+//     wordsSet.add([dbCz[indexWord].cz, dbCz[indexWord].context]);
+//   }
+//   return [...wordsSet];
+// }
+
+function getRandomWordsCz(qty = 10) {
+  const shuffledWordsCz = shuffleArray([...dbCz]); // clone and shuffle the array
+  return shuffledWordsCz.slice(0, qty).map((item) => [item.cz, item.context]);
 }
 
 elements.btn5Node.addEventListener('click', () => {
