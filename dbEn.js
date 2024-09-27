@@ -2179,7 +2179,7 @@ const dbEn = [
   },
   {
     id: 454,
-    en: 'altered ',
+    en: 'altered',
     ua: 'змінено, змінений',
     context: 's will still point to the altered array',
     association: 'альтернативно',
