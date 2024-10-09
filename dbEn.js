@@ -85,7 +85,13 @@ const dbEn = [
   { id: 48, en: 'arcana', ua: 'таємниці', context: '', association: '' },
   { id: 49, en: 'dormant', ua: 'бездіяльний', context: '', association: '' },
   { id: 50, en: 'offended', ua: 'ображатися', context: '', association: '' },
-  { id: 51, en: 'ooze', ua: 'твань', context: '', association: '' },
+  {
+    id: 51,
+    en: 'ooze',
+    ua: 'сочитися, болото, липкий бруд',
+    context: ' abandoned barges sunk in ooze',
+    association: 'вузька дірка, через яку витікає липкий бруд',
+  },
   { id: 52, en: 'currently', ua: 'в даний час', context: '', association: '' },
   {
     id: 53,
@@ -157,7 +163,13 @@ const dbEn = [
     context: '',
     association: '',
   },
-  { id: 81, en: 'pathetic', ua: 'патетичний', context: '', association: '' },
+  {
+    id: 81,
+    en: 'pathetic',
+    ua: 'патетичний, жалюгідний',
+    context: 'you`re so pathetic',
+    association: 'паяц жалюгідний',
+  },
   {
     id: 82,
     en: 'affordable',
@@ -2941,7 +2953,7 @@ const dbEn = [
   },
   {
     id: 563,
-    en: 'delimiter ',
+    en: 'delimiter',
     ua: 'роздільник',
     context: 'delimiter that is used to separate the array elements',
     association: 'делитель',
@@ -3084,7 +3096,7 @@ const dbEn = [
     id: 584,
     en: 'hence',
     ua: 'отже',
-    context: '',
+    context: 'hance you`re a gay',
     association: 'отже хенсони (ммм-боп)',
   },
   {
@@ -4037,6 +4049,48 @@ const dbEn = [
     ua: 'перетасувати',
     context: 'Shuffle the Array Instead of Generating Random Indices',
     association: 'суфле - перемішані яєчні жовтки.',
+  },
+  {
+    id: 722,
+    en: 'spade',
+    ua: 'піка (масть)',
+    context: 'The Ace of Spades',
+    association: 'спайдермен заходить з піки',
+  },
+  {
+    id: 723,
+    en: 'clubs',
+    ua: 'трефа (масть)',
+    context: 'I know what the clubs are weapons of war',
+    association: 'трефовий клуб',
+  },
+  {
+    id: 724,
+    en: 'conceal',
+    ua: 'приховувати',
+    context: 'he may conceal a king in his heand',
+    association: 'steal and conceal',
+  },
+  {
+    id: 725,
+    en: 'admit',
+    ua: 'визнати',
+    context: 'James Hetfield admitted that he steal songs from himself',
+    association: 'відмітити ',
+  },
+  {
+    id: 726,
+    en: 'dump',
+    ua: 'звалище, скидати',
+    context: 'mongodump creates dump from the MongoDB db',
+    association: 'дам по дупі і вилетиш на сміття',
+  },
+  {
+    id: 727,
+    en: 'contingencies',
+    ua: 'непередбачувані витрати',
+    context: 'there are many contingencies in the new project',
+    association: 'непередбачено куплене печіво конті',
   },
 ];
 
