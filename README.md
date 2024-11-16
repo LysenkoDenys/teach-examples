@@ -2,7 +2,7 @@
 
 ### The application is dedicated to teach children to manage mathematical operations and learn some proverbs
 
-### The application deployed here:
+### The application is deployed here:
 
 https://teach-examples.vercel.app
 
