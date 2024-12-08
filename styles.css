@@ -8,6 +8,7 @@ body {
   background-image: url('https://www.transparenttextures.com/patterns/graphy.png');
   color: #fff;
   user-select: none; /* Standard */
+  box-sizing: border-box;
 }
 
 .container {
@@ -102,7 +103,7 @@ input {
   box-shadow: 5px 5px 5px rgba(46, 38, 38, 50%);
 }
 
-.inputs {
+.inputs__container {
   margin: 1px 5px;
   background-color: rgba(127, 116, 116, 60%);
   padding: 5px;
@@ -229,4 +230,42 @@ input {
 .modal__title {
   font-weight: 600;
   padding-left: 8px;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 480px) {
+  .inputs,
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.1em;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  input {
+    flex: 1 1 auto;
+    font-size: 1.2rem;
+    padding: 5px 0.5em;
+    width: 12%;
+    max-width: 100%;
+    margin: 0 1px;
+  }
+
+  label {
+    font-size: 1.2rem;
+  }
+
+  .button0,
+  .button1,
+  .button2 {
+    flex: 1 1 auto;
+    font-size: 1.2rem;
+    padding: 5px 0.2em;
+    margin: 0.1em;
+    width: 12%;
+    max-width: 100%;
+  }
 }
