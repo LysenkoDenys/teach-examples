@@ -1,6 +1,19 @@
 const dbEn = [
-  { id: 1, en: 'yell', ua: 'кричати', context: '', association: '' },
-  { id: 2, en: 'widower', ua: 'вдівець', context: '', association: '' },
+  {
+    id: 1,
+    en: 'yell',
+    ua: 'кричати, волати, верещати',
+    context:
+      'In the midnight hour, she cried, More, more, more With a rebel yell, she cried, More, more, more, wow!',
+    association: 'кричати, щоб аж ялинка тряслася',
+  },
+  {
+    id: 2,
+    en: 'widower',
+    ua: 'вдівець',
+    context: '',
+    association: 'бачивший види вдівець',
+  },
   {
     id: 3,
     en: 'in charge',
@@ -17,7 +30,13 @@ const dbEn = [
     context: 'I am stuck',
     association: 'рука застрягла а стакані',
   },
-  { id: 7, en: 'dot', ua: 'крапка', context: '', association: '' },
+  {
+    id: 7,
+    en: 'dot',
+    ua: 'крапка',
+    context: 'facebook dot com',
+    association: 'дотиком пера робиться крапка',
+  },
   { id: 8, en: 'squiggle', ua: 'карлючка', context: '', association: '' },
   {
     id: 9,
@@ -41,7 +60,14 @@ const dbEn = [
     context: '',
     association: '',
   },
-  { id: 19, en: 'underneath', ua: 'під', context: '', association: '' },
+  {
+    id: 19,
+    en: 'underneath',
+    ua: 'під',
+    context:
+      'Underneath the bridge downtown, is where I drew some blood, Underneath the bridge downtown, I could not get enough',
+    association: 'під ним',
+  },
   { id: 20, en: 'shanties', ua: 'халупки', context: '', association: '' },
   { id: 21, en: 'brat', ua: 'кодло', context: '', association: '' },
   { id: 22, en: 'precious', ua: 'дорогоцінний', context: '', association: '' },
@@ -52,11 +78,24 @@ const dbEn = [
     context: 'Admittedly, this example is a bit contrived',
     association: 'адмін припускає дозвіл на встановлення ПЗ',
   },
-  { id: 24, en: 'recall', ua: 'відгук, спогад', context: '', association: '' },
+  {
+    id: 24,
+    en: 'recall',
+    ua: 'відгук, спогад',
+    context: 'total recall',
+    association: 'перевиклик',
+  },
   { id: 25, en: 'nourished', ua: 'нагодовані', context: '', association: '' },
   { id: 26, en: 'harden', ua: 'укріпляти', context: '', association: '' },
   { id: 27, en: 'outcome', ua: 'результат', context: '', association: '' },
-  { id: 28, en: 'reckless', ua: 'необачний', context: '', association: '' },
+  {
+    id: 28,
+    en: 'reckless',
+    ua: 'необачний, безрозсудний',
+    context:
+      'On and on, reckless abandon Something`s wrong, this is gonna shock them Nothing to hold on to We`ll use this song to lead you on',
+    association: 'рЕзиковий',
+  },
   { id: 29, en: 'passionate', ua: 'пристрасний', context: '', association: '' },
   { id: 30, en: 'affair', ua: 'справа', context: '', association: '' },
   { id: 31, en: 'parcel', ua: 'посилка', context: '', association: '' },
@@ -72,9 +111,21 @@ const dbEn = [
   { id: 41, en: 'parsley', ua: 'петрушка', context: '', association: '' },
   { id: 42, en: 'bloated', ua: 'роздутий', context: '', association: '' },
   { id: 43, en: 'scorn', ua: 'зневажати', context: '', association: '' },
-  { id: 44, en: 'furious', ua: 'розлючений', context: '', association: '' },
+  {
+    id: 44,
+    en: 'furious',
+    ua: 'розлючений',
+    context: 'fast and furious',
+    association: 'розлючена фурія',
+  },
   { id: 45, en: 'embracing', ua: 'охоплює', context: '', association: '' },
-  { id: 46, en: 'assign', ua: 'призначати', context: '', association: '' },
+  {
+    id: 46,
+    en: 'assign',
+    ua: 'призначати',
+    context: 'variable assign',
+    association: 'як знак',
+  },
   {
     id: 47,
     en: 'mandatory',
@@ -84,7 +135,13 @@ const dbEn = [
   },
   { id: 48, en: 'arcana', ua: 'таємниці', context: '', association: '' },
   { id: 49, en: 'dormant', ua: 'бездіяльний', context: '', association: '' },
-  { id: 50, en: 'offended', ua: 'ображатися', context: '', association: '' },
+  {
+    id: 50,
+    en: 'offended',
+    ua: 'ображатися',
+    context: 'My tendency for dependency is offending me',
+    association: 'без кінця ображатися',
+  },
   {
     id: 51,
     en: 'ooze',
@@ -138,7 +195,13 @@ const dbEn = [
   },
   { id: 72, en: 'handsome', ua: 'красивий', context: '', association: '' },
   { id: 73, en: 'placated', ua: 'приборкати', context: '', association: '' },
-  { id: 74, en: 'behold', ua: 'ось', context: '', association: '' },
+  {
+    id: 74,
+    en: 'behold',
+    ua: 'ось',
+    context: 'Behold the flesh and the power it holds',
+    association: 'будь тримаючим вісь (май стержня)',
+  },
   {
     id: 75,
     en: 'tenure',
@@ -340,7 +403,14 @@ const dbEn = [
       'callbacks are the functions that are slipped or passed into another function to decide the invocation of that function',
     association: 'сліпий слизький цуцик (тільки народився)',
   },
-  { id: 149, en: 'behold', ua: 'ось', context: '', association: '' },
+  {
+    id: 149,
+    en: 'underestimate',
+    ua: 'недооцінювати',
+    context:
+      'Don`t underestimate Your heart is never late And love will always find a way',
+    association: 'підоцінка',
+  },
   {
     id: 150,
     en: 'spot',
@@ -373,7 +443,13 @@ const dbEn = [
     association: 'нащадок дисидента',
   },
   { id: 163, en: 'gibberish', ua: 'тарабарщина', context: '', association: '' },
-  { id: 164, en: 'flooding', ua: 'затоплення', context: '', association: '' },
+  {
+    id: 164,
+    en: 'flooding',
+    ua: 'затоплення',
+    context: 'we are flooding in chat',
+    association: 'флудити в чаті - додавати води в чисту інформацію',
+  },
   { id: 165, en: 'rebates', ua: 'знижки', context: '', association: '' },
   { id: 166, en: 'gaze', ua: 'вдивлятися', context: '', association: '' },
   { id: 167, en: 'drool', ua: 'сочитися', context: '', association: '' },
@@ -400,7 +476,7 @@ const dbEn = [
   },
   { id: 177, en: 'inedible', ua: 'неїстівний', context: '', association: '' },
   { id: 178, en: 'rooting', ua: 'вкорінення', context: '', association: '' },
-  { id: 179, en: 'Cubs', ua: 'дитинчата', context: '', association: '' },
+  { id: 179, en: 'cubs', ua: 'дитинчата', context: '', association: '' },
   { id: 180, en: 'jolly', ua: 'веселий', context: '', association: '' },
   { id: 181, en: 'proper', ua: 'правильний', context: '', association: '' },
   { id: 182, en: 'stool', ua: 'стілець', context: '', association: '' },
@@ -419,7 +495,13 @@ const dbEn = [
     context: '',
     association: '',
   },
-  { id: 186, en: 'inspire', ua: 'надихати', context: '', association: '' },
+  {
+    id: 186,
+    en: 'inspire',
+    ua: 'надихати',
+    context: 'you inspire me to create this app',
+    association: 'вдихнути життя всередину',
+  },
   {
     id: 187,
     en: 'thrive',
@@ -513,7 +595,7 @@ const dbEn = [
     id: 203,
     en: 'scope',
     ua: 'сфера застосування',
-    context: '',
+    context: 'global/local/function scope',
     association: 'телескоп (обмежений)',
   },
   {
@@ -534,8 +616,8 @@ const dbEn = [
     id: 206,
     en: 'deprecate',
     ua: 'занепадати, застарівати',
-    context: '',
-    association: '',
+    context: 'this approach is deprecated',
+    association: 'те при Кате великій було - вже застаріло',
   },
   { id: 207, en: 'template', ua: 'шаблон', context: '', association: '' },
   { id: 208, en: 'inspiration', ua: 'натхнення', context: '', association: '' },
@@ -796,9 +878,9 @@ const dbEn = [
     association:
       'додають дужкам властивостей батьків, так як підвищують пріоритет виконання операцій',
   },
-  { id: 248, en: 'semicolon', ua: ';', context: '', association: '' },
-  { id: 249, en: 'comma', ua: ',', context: '', association: '' },
-  { id: 250, en: 'quotes', ua: '""', context: '', association: '' },
+  { id: 248, en: 'semicolon', ua: ';', context: ';', association: '' },
+  { id: 249, en: 'comma', ua: ',', context: ',', association: '' },
+  { id: 250, en: 'quotes', ua: '  ', context: '  ', association: '' },
   {
     id: 251,
     en: 'suspend',
@@ -965,7 +1047,8 @@ const dbEn = [
     id: 274,
     en: 'precise',
     ua: 'точний, чіткий',
-    context: 'precise saving',
+    context:
+      'Premeditated Calculated, precise Created cases based on races Exchanging life for lies, exchanging life for lies',
     association: 'пре сайз - примірили розмір',
   },
   {
@@ -1105,8 +1188,8 @@ const dbEn = [
     id: 294,
     en: 'pale',
     ua: 'блідий, слабкий, межа, огорожа',
-    context: '',
-    association: '',
+    context: 'Is something wrong? You`re looking kind of pale',
+    association: 'спалився і побілів',
   },
   {
     id: 295,
@@ -1349,13 +1432,7 @@ const dbEn = [
     context: 'it was a courtship',
     association: 'перед тим як піти до суду для одруження',
   },
-  {
-    id: 332,
-    en: 'buffalo',
-    ua: 'буйвол, "бізон"',
-    context: '',
-    association: '',
-  },
+  { id: 332, en: 'buffalo', ua: 'буйвол, бізон', context: '', association: '' },
   {
     id: 333,
     en: 'grunt',
@@ -1381,7 +1458,7 @@ const dbEn = [
     id: 336,
     en: 'flood',
     ua: 'злива, повінь, потоп, вплив',
-    context: 'flood',
+    context: 'where was a flood that year',
     association: 'флудити в чаті - додавати води в чисту інформацію',
   },
   {
@@ -1502,7 +1579,7 @@ const dbEn = [
     en: 'fret',
     ua: 'нервувати',
     context: 'fret not',
-    association: 'нервуватись "фретно"',
+    association: 'нервуватись фретно',
   },
   {
     id: 355,
@@ -1565,7 +1642,7 @@ const dbEn = [
     id: 363,
     en: 'swap',
     ua: 'обмін, міняти',
-    context: 'swap the values of a and b',
+    context: 'swap the values of a and b',
     association: 'заміна з воплями',
   },
   {
@@ -1954,7 +2031,8 @@ const dbEn = [
     en: 'enhance',
     ua: 'покращувати, збільшувати',
     context: '',
-    association: '',
+    association:
+      'щоб співати в Hansons треба постійно покращувати свої музичні навички',
   },
   {
     id: 420,
@@ -1991,7 +2069,13 @@ const dbEn = [
     context: 'this approach does not work',
     association: 'enemy mechs approaching',
   },
-  { id: 425, en: 'bloatware', ua: 'вірус', context: '', association: '' },
+  {
+    id: 425,
+    en: 'bloatware',
+    ua: 'вірус',
+    context: '',
+    association: 'напухша зовнішність',
+  },
   {
     id: 426,
     en: 'dispatch',
@@ -2066,7 +2150,7 @@ const dbEn = [
     id: 436,
     en: 'whereas',
     ua: 'тоді як, оскільки',
-    context: 'var is globally scoped whereas let and const are block scoped',
+    context: 'var is globally scoped whereas let and const are block scoped',
     association: 'де як',
   },
   {
@@ -2172,7 +2256,7 @@ const dbEn = [
     id: 451,
     en: 'clarity',
     ua: 'прозорість, чистота, ясність',
-    context: 'moment of clarity',
+    context: 'moment of clarity',
     association: 'Клара чиста і ясна прийшла з бані',
   },
   {
@@ -2207,7 +2291,7 @@ const dbEn = [
     id: 456,
     en: 'eliminate',
     ua: 'ліквідувати, знищувати, ігнорувати',
-    context: 'The rest parameter eliminates the need to check the args array ',
+    context: 'The rest parameter eliminates the need to check the args array ',
     association: 'ліквідувати через ілюмінатор',
   },
   {
@@ -2265,7 +2349,7 @@ const dbEn = [
     id: 464,
     en: 'rid',
     ua: 'позбутися, прибрати, викорчувати',
-    context: 'Get rid of the stats, and see if you can destructure it.',
+    context: 'Get rid of the stats, and see if you can destructure it.',
     association: 'рідагуючи - позбуваємось помилок',
   },
   {
@@ -2287,7 +2371,7 @@ const dbEn = [
     id: 467,
     en: 'instantiate',
     ua: 'створити екземпляр',
-    context: 'using the new keyword to instantiate the object',
+    context: 'using the new keyword to instantiate the object',
     association: 'новий екземпляр мене в інштаграмі',
   },
   {
@@ -2380,7 +2464,7 @@ const dbEn = [
     id: 481,
     en: 'wildcard',
     ua: 'символ підстановки',
-    context: 'you can save time using the wildcard character: .',
+    context: 'you can save time using the wildcard character: .',
     association: 'дика картка',
   },
   {
@@ -2394,7 +2478,7 @@ const dbEn = [
     id: 483,
     en: 'hyphen',
     ua: 'дефіс',
-    context: 'hyphen character: -.',
+    context: 'hyphen character: -.',
     association: 'хайпова-курка пишеться через дефіс.',
   },
   {
@@ -2499,7 +2583,7 @@ const dbEn = [
     id: 498,
     en: 'caboose',
     ua: 'камбуз, гальмовий вагон',
-    context: 'the last car on a train is the caboose',
+    context: 'the last car on a train is the caboose',
     association: '',
   },
   {
@@ -2791,22 +2875,22 @@ const dbEn = [
     id: 540,
     en: 'expiration',
     ua: 'закінчення терміну дії',
-    context: '',
+    context: 'cookies expiration time is over',
     association: 'експлуатація',
   },
   {
     id: 541,
     en: 'expired',
     ua: 'закінчився',
-    context: '',
+    context: 'your trial period is expired',
     association: 'бувший період',
   },
   {
     id: 542,
     en: 'get rid',
     ua: 'позбався, збувати',
-    context: '',
-    association: '',
+    context: 'get rid of the redundant curly braces',
+    association: 'рідюсь свій код',
   },
   {
     id: 543,
@@ -2859,10 +2943,11 @@ const dbEn = [
   },
   {
     id: 550,
-    en: 'precisely',
-    ua: 'точно',
-    context: '',
-    association: 'присоска точно знає до кого причмоктатися',
+    en: 'constrain',
+    ua: 'обмеження',
+    context:
+      'Dear Chasey Lain I wrote to constrain This letter is my last As your biggest fan I must demand You let me eat your ass',
+    association: 'ми не можемо вийти за обмеження конструкції',
   },
   {
     id: 551,
@@ -2910,14 +2995,14 @@ const dbEn = [
     id: 557,
     en: 'appealing',
     ua: 'привабливий, покращений, благаючий',
-    context: '',
+    context: 'TailwindCSS helps to make appealing UI',
     association: 'привабливий гей, благаючий про апеляцію і суді',
   },
   {
     id: 558,
     en: 'processing',
     ua: 'обробка',
-    context: 'reduce method allows for more general forms of array processing',
+    context: 'reduce method allows for more general forms of array processing',
     association: 'процес обробки',
   },
   {
@@ -2977,7 +3062,7 @@ const dbEn = [
     id: 567,
     en: 'intruder',
     ua: 'порушник, той хто вторгся до не своїх володінь',
-    context: '',
+    context: 'alarm! intruder in the house',
     association: 'порушник трудового кодексу',
   },
   {
@@ -3068,7 +3153,7 @@ const dbEn = [
     id: 580,
     en: 'identation',
     ua: 'відступ (в абзаці), видовбування',
-    context: '',
+    context: 'I hate python because of the indentation',
     association: 'ідентифікувався і відступив від лібералів',
   },
   {
@@ -3416,7 +3501,8 @@ const dbEn = [
     id: 630,
     en: 'tuple',
     ua: 'кортеж',
-    context: '',
+    context:
+      'A tuple is an immutable, ordered collection of elements, which can store values of different types',
     association: 'кортеж, довгий, як тополя',
   },
   {
@@ -3466,7 +3552,7 @@ const dbEn = [
     en: 'transpile',
     ua: 'трансформація і компіляція',
     context:
-      'Transpiling, short for "transformation" and "compiling," refers to the process of converting source code from one programming language into another',
+      'Transpiling, short for transformation and compiling, refers to the process of converting source code from one programming language into another',
     association: '',
   },
   {
@@ -3567,7 +3653,7 @@ const dbEn = [
     id: 652,
     en: 'pros and cons',
     ua: 'плюси і мінуси',
-    context: '',
+    context: 'pros and cons of TS',
     association: '',
   },
   {
@@ -3631,7 +3717,7 @@ const dbEn = [
     id: 661,
     en: 'sniff',
     ua: 'нюхати, вдихання',
-    context: '',
+    context: 'sniff my stinky socks',
     association: 'нюхальний сніг (кокс)',
   },
   {
@@ -3729,14 +3815,14 @@ const dbEn = [
     id: 675,
     en: 'mate',
     ua: 'товариш',
-    context: '',
+    context: 'I have a site about my groupmates',
     association: 'материй товариш',
   },
   {
     id: 676,
     en: 'tip',
-    ua: 'порада',
-    context: '',
+    ua: 'порада, підказка, чайові',
+    context: 'have you any tips for me?',
     association: 'типові настанови',
   },
   {
@@ -3746,7 +3832,13 @@ const dbEn = [
     context: '',
     association: 'хочучий задати запитання після ознайомлення',
   },
-  { id: 678, en: 'purge', ua: 'чистка', context: '', association: 'пурген' },
+  {
+    id: 678,
+    en: 'purge',
+    ua: 'чистка',
+    context: 'vagetables purge the body',
+    association: 'пурген',
+  },
   {
     id: 679,
     en: 'soot',
@@ -3772,7 +3864,8 @@ const dbEn = [
     id: 682,
     en: 'dime',
     ua: 'копійки',
-    context: '',
+    context:
+      'My rhymes score dimes ain`t nothing you can do It`s hard to clap with your dick in your hand, dude',
     association: 'дай мені копійку',
   },
   {
@@ -4091,6 +4184,63 @@ const dbEn = [
     ua: 'непередбачувані витрати',
     context: 'there are many contingencies in the new project',
     association: 'непередбачено куплене печіво конті',
+  },
+  {
+    id: 728,
+    en: 'irritating',
+    ua: 'дратує',
+    context: 'stop it! this irritating me',
+    association: 'іридій дратує своєю сріблястість',
+  },
+  {
+    id: 729,
+    en: 'preceding',
+    ua: 'попередній',
+    context: 'describe the termdefined by the preceding <dt>',
+    association: 'присів-встав попередник зайняв твоє місце',
+  },
+  {
+    id: 730,
+    en: 'slug',
+    ua: 'слимак, вайло, лінуватися',
+    context: 'don`t wanna be a slug - it`s cool to hate!',
+    association: 'млявий слуга',
+  },
+  {
+    id: 731,
+    en: 'dormant',
+    ua: 'сплячий, бездіяльний',
+    context: 'dormant property of application',
+    association: 'дармові бездіяльні працівники',
+  },
+  {
+    id: 732,
+    en: 'vague',
+    ua: 'розпливчатий, не визначений, імлистий, не чіткий',
+    context: 'vague target - doesn`t work',
+    association: 'вагаючийся кліент',
+  },
+  {
+    id: 733,
+    en: 'mangling',
+    ua: 'калічення',
+    context: 'mangling properties',
+    association: 'чоловік під глінтвейном калічиться на лижах',
+  },
+  {
+    id: 734,
+    en: 'compelling',
+    ua: 'переконливий, нездоланний, непереборний',
+    context: 'compelling explanation',
+    association: 'комплексне пояснення переконує більше',
+  },
+  {
+    id: 735,
+    en: 'constrain',
+    ua: 'обмеження',
+    context:
+      'Dear Chasey Lain I wrote to constrain This letter is my last As your biggest fan I must demand You let me eat your ass',
+    association: 'ми не можемо вийти за обмеження конструкції',
   },
 ];
 

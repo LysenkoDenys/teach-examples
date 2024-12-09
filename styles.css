@@ -242,13 +242,16 @@ input {
     gap: 0.1em;
     flex-wrap: wrap;
     width: 100%;
-    margin-bottom: 10px;
+  }
+
+  .buttons {
+    margin-top: 5px;
   }
 
   input {
     flex: 1 1 auto;
     font-size: 1.2rem;
-    padding: 5px 0.5em;
+    padding: 1px 0.5em;
     width: 12%;
     max-width: 100%;
     margin: 0 1px;
