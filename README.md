@@ -27,9 +27,8 @@ https://teach-examples.vercel.app
 
 <p>Todo:</p>
 <ul>
-<li>add english words/ukrainian words + context and association - ok</li>
-<li>add cz words/ukrainian words - ok</li>
+<li>add english words/ukrainian words + context and association</li>
 <li>add uploading/updating possibility</li>
-<li>ARIA</li>
-<li>repeat issue</li>
+<li>add downloading possibility</li>
+
 </ul>

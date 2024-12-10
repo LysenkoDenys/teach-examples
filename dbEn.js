@@ -4,7 +4,7 @@ const dbEn = [
     en: 'yell',
     ua: 'кричати, волати, верещати',
     context:
-      'In the midnight hour, she cried, More, more, more With a rebel yell, she cried, More, more, more, wow!',
+      'In the midnight hour, she cried, More, more, moreWith a rebel yell, she cried, More, more, more, wow!',
     association: 'кричати, щоб аж ялинка тряслася',
   },
   {
@@ -93,7 +93,7 @@ const dbEn = [
     en: 'reckless',
     ua: 'необачний, безрозсудний',
     context:
-      'On and on, reckless abandon Something`s wrong, this is gonna shock them Nothing to hold on to We`ll use this song to lead you on',
+      'On and on, reckless abandonSomething`s wrong, this is gonna shock themNothing to hold on toWe`ll use this song to lead you on',
     association: 'рЕзиковий',
   },
   { id: 29, en: 'passionate', ua: 'пристрасний', context: '', association: '' },
@@ -146,7 +146,7 @@ const dbEn = [
     id: 51,
     en: 'ooze',
     ua: 'сочитися, болото, липкий бруд',
-    context: ' abandoned barges sunk in ooze',
+    context: 'abandoned barges sunk in ooze',
     association: 'вузька дірка, через яку витікає липкий бруд',
   },
   { id: 52, en: 'currently', ua: 'в даний час', context: '', association: '' },
@@ -408,7 +408,7 @@ const dbEn = [
     en: 'underestimate',
     ua: 'недооцінювати',
     context:
-      'Don`t underestimate Your heart is never late And love will always find a way',
+      'Don`t underestimateYour heart is never lateAnd love will always find a way',
     association: 'підоцінка',
   },
   {
@@ -492,8 +492,8 @@ const dbEn = [
     id: 185,
     en: 'infinity',
     ua: 'нескінченність',
-    context: '',
-    association: '',
+    context: '∞',
+    association: 'нескінченно дорога в обслуговуванні infinity',
   },
   {
     id: 186,
@@ -634,7 +634,8 @@ const dbEn = [
     id: 212,
     en: 'inherit',
     ua: 'успадкувати',
-    context: '',
+    context:
+      'Inheritance is an OOP feature where a class (child/subclass) inherits properties and methods from another class (parent/superclass), enabling code reuse and hierarchical relationships.',
     association: 'in her it (в ній це) - в мамі спадкоємець.',
   },
   {
@@ -778,7 +779,13 @@ const dbEn = [
     context: 'bunch of isolatet comonents',
     association: 'купа каміння в бані',
   },
-  { id: 233, en: 'dash', ua: 'тире', context: '', association: '' },
+  {
+    id: 233,
+    en: 'dash',
+    ua: 'тире',
+    context: 'node --v',
+    association: 'low dash _ library',
+  },
   {
     id: 234,
     en: 'essentially',
@@ -880,7 +887,7 @@ const dbEn = [
   },
   { id: 248, en: 'semicolon', ua: ';', context: ';', association: '' },
   { id: 249, en: 'comma', ua: ',', context: ',', association: '' },
-  { id: 250, en: 'quotes', ua: '  ', context: '  ', association: '' },
+  { id: 250, en: 'quotes', ua: '', context: '', association: '' },
   {
     id: 251,
     en: 'suspend',
@@ -998,7 +1005,7 @@ const dbEn = [
     id: 267,
     en: 'dismiss',
     ua: 'відхиляти, вигнати',
-    context: '',
+    context: 'click anywhere to dismiss the toast',
     association: 'не сумувати за тим що позбувся',
   },
   {
@@ -1048,7 +1055,7 @@ const dbEn = [
     en: 'precise',
     ua: 'точний, чіткий',
     context:
-      'Premeditated Calculated, precise Created cases based on races Exchanging life for lies, exchanging life for lies',
+      'PremeditatedCalculated, preciseCreated cases based on racesExchanging life for lies, exchanging life for lies',
     association: 'пре сайз - примірили розмір',
   },
   {
@@ -1174,21 +1181,21 @@ const dbEn = [
     id: 292,
     en: 'appropriate',
     ua: 'відповідний, належний',
-    context: '',
+    context: 'provide an appropriate age between 0 and 99',
     association: 'а про приятеля (відповідного, ну того, кого ти знаєш)',
   },
   {
     id: 293,
     en: 'brace',
     ua: 'фігурна дужка, клярма, скоба',
-    context: '',
+    context: '{}',
     association: 'як пловець, пливе брасом - вид зверху {',
   },
   {
     id: 294,
     en: 'pale',
     ua: 'блідий, слабкий, межа, огорожа',
-    context: 'Is something wrong? You`re looking kind of pale',
+    context: 'Is something wrong?You`re looking kind of pale',
     association: 'спалився і побілів',
   },
   {
@@ -1279,7 +1286,7 @@ const dbEn = [
     id: 307,
     en: 'embrace',
     ua: 'обійняти',
-    context: '',
+    context: 'let me embrace you like a friend',
     association: 'закрити в дужки',
   },
   {
@@ -1620,7 +1627,7 @@ const dbEn = [
     id: 360,
     en: 'quiz',
     ua: 'вікторина, дивна річ, насмішка',
-    context: '',
+    context: 'challenges in sololearn are a kind of quiz of 5 questions ',
     association:
       'дивна річ: квизяючий хлопчик, з якого насміхаються, що він не виграв вікторину',
   },
@@ -2185,7 +2192,7 @@ const dbEn = [
     id: 441,
     en: 'hike',
     ua: 'похід, піший стрій',
-    context: '',
+    context: 'Installation complete! happy hiking!',
     association: 'хічхакер',
   },
   {
@@ -2791,7 +2798,7 @@ const dbEn = [
     id: 528,
     en: 'instance',
     ua: 'зразок, екземпляр, вимога, інстанція',
-    context: 'create a new instance of Dog',
+    context: 'create a new instance of class Dog',
     association: 'нова інстанція екземпляру',
   },
   {
@@ -2946,7 +2953,7 @@ const dbEn = [
     en: 'constrain',
     ua: 'обмеження',
     context:
-      'Dear Chasey Lain I wrote to constrain This letter is my last As your biggest fan I must demand You let me eat your ass',
+      'Dear Chasey LainI wrote to constrainThis letter is my lastAs your biggest fanI must demandYou let me eat your ass',
     association: 'ми не можемо вийти за обмеження конструкції',
   },
   {
@@ -3752,7 +3759,7 @@ const dbEn = [
     id: 666,
     en: 'crucial',
     ua: 'вирішальне значення, критичний, поворотний',
-    context: '',
+    context: 'exception is a crucial concept in programming',
     association: 'в куршавелі зечмо отримало вирішальне значення',
   },
   {
@@ -3865,7 +3872,7 @@ const dbEn = [
     en: 'dime',
     ua: 'копійки',
     context:
-      'My rhymes score dimes ain`t nothing you can do It`s hard to clap with your dick in your hand, dude',
+      'My rhymes score dimes ain`t nothing you can doIt`s hard to clap with your dick in your hand, dude',
     association: 'дай мені копійку',
   },
   {
@@ -4239,7 +4246,7 @@ const dbEn = [
     en: 'constrain',
     ua: 'обмеження',
     context:
-      'Dear Chasey Lain I wrote to constrain This letter is my last As your biggest fan I must demand You let me eat your ass',
+      'Dear Chasey LainI wrote to constrainThis letter is my lastAs your biggest fanI must demandYou let me eat your ass',
     association: 'ми не можемо вийти за обмеження конструкції',
   },
 ];
