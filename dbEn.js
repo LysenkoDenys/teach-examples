@@ -4,25 +4,40 @@ const dbEn = [
     en: 'yell',
     ua: 'кричати, волати, верещати',
     context:
-      'In the midnight hour, she cried, More, more, moreWith a rebel yell, she cried, More, more, more, wow!',
+      'In the midnight hour, she cried, More, more, more With a rebel yell, she cried, More, more, more, wow!',
     association: 'кричати, щоб аж ялинка тряслася',
   },
   {
     id: 2,
     en: 'widower',
     ua: 'вдівець',
-    context: '',
+    context:
+      'After his wife passed away, the widower spent his days tending to their garden.',
     association: 'бачивший види вдівець',
   },
   {
     id: 3,
     en: 'in charge',
     ua: 'відповідальний',
-    context: '',
-    association: '',
+    context:
+      'The manager was in charge of organizing the company`s annual meeting',
+    association: 'черговий',
   },
-  { id: 4, en: 'split', ua: 'розкол', context: '', association: '' },
-  { id: 5, en: 'chores', ua: 'клопоти', context: '', association: '' },
+  {
+    id: 4,
+    en: 'split',
+    ua: 'розкол',
+    context: 'They decided to split the bill equally after dinner.',
+    association: 'з плити впав казан і розбився',
+  },
+  {
+    id: 5,
+    en: 'chores',
+    ua: 'клопоти',
+    context:
+      'Doing household chores like washing dishes and sweeping the floor can be tiring but necessary.',
+    association: 'чопоритися в будинку',
+  },
   {
     id: 6,
     en: 'get stuck',
@@ -37,7 +52,14 @@ const dbEn = [
     context: 'facebook dot com',
     association: 'дотиком пера робиться крапка',
   },
-  { id: 8, en: 'squiggle', ua: 'карлючка', context: '', association: '' },
+  {
+    id: 8,
+    en: 'squiggle',
+    ua: 'карлючка',
+    context:
+      'The child drew a squiggle on the paper that vaguely resembled a cat.',
+    association: '',
+  },
   {
     id: 9,
     en: 'interchangeably',
@@ -45,19 +67,50 @@ const dbEn = [
     context: 'subclasses can be used interchangeably with their base class',
     association: '',
   },
-  { id: 10, en: 'mold', ua: 'цвіль', context: '', association: '' },
+  {
+    id: 10,
+    en: 'mold',
+    ua: 'цвіль',
+    context:
+      'The damp bread began to grow mold after being left out for several days.',
+    association: 'молдавани робили ремонт, через рік стіни поцівли',
+  },
   { id: 11, en: 'teensy', ua: 'крихітний', context: '', association: '' },
-  { id: 12, en: 'fumes', ua: 'чад', context: '', association: '' },
-  { id: 13, en: 'faucet', ua: 'кран', context: '', association: '' },
+  {
+    id: 12,
+    en: 'fumes',
+    ua: 'чад',
+    context: 'The car’s engine released thick black fumes into the air.',
+    association: 'фу-смесь',
+  },
+  {
+    id: 13,
+    en: 'faucet',
+    ua: 'кран',
+    context: 'The faucet in the kitchen was dripping all night, wasting water.',
+    association: '',
+  },
   { id: 14, en: 'suspicious', ua: 'підозрілий', context: '', association: '' },
   { id: 15, en: 'banish', ua: 'відганяти', context: '', association: '' },
-  { id: 16, en: 'tap', ua: 'кран', context: '', association: '' },
-  { id: 17, en: 'consequences', ua: 'наслідки', context: '', association: '' },
+  {
+    id: 16,
+    en: 'tap',
+    ua: 'кран, перемикач, натиснути',
+    context: 'He gave the microphone a quick tap to check if it was working.',
+    association: 'натиснути тапком таргана',
+  },
+  {
+    id: 17,
+    en: 'consequences',
+    ua: 'наслідки',
+    context: 'Breaking the rules can have serious consequences.',
+    association: '',
+  },
   {
     id: 18,
     en: 'environment',
     ua: 'навколишнє середовище',
-    context: '',
+    context: 'Protecting the environment is crucial for future generations.',
     association: '',
   },
   {
@@ -68,9 +121,23 @@ const dbEn = [
       'Underneath the bridge downtown, is where I drew some blood, Underneath the bridge downtown, I could not get enough',
     association: 'під ним',
   },
-  { id: 20, en: 'shanties', ua: 'халупки', context: '', association: '' },
+  {
+    id: 20,
+    en: 'shanties',
+    ua: 'халупки',
+    context:
+      'The edge of the city was lined with makeshift shanties built from scrap wood and metal.',
+    association: '',
+  },
   { id: 21, en: 'brat', ua: 'кодло', context: '', association: '' },
-  { id: 22, en: 'precious', ua: 'дорогоцінний', context: '', association: '' },
+  {
+    id: 22,
+    en: 'precious',
+    ua: 'дорогоцінний',
+    context:
+      'Betting on the cure Cause it must get better than this Betting on the cure Yeah everyone`s got to have the sickness Cause everyone seems to need the cure Precious cure',
+    association: 'преціненний',
+  },
   {
     id: 23,
     en: 'admit',
@@ -93,13 +160,20 @@ const dbEn = [
     en: 'reckless',
     ua: 'необачний, безрозсудний',
     context:
-      'On and on, reckless abandonSomething`s wrong, this is gonna shock themNothing to hold on toWe`ll use this song to lead you on',
+      'On and on, reckless abandon Something`s wrong, this is gonna shock them Nothing to hold on to We`ll use this song to lead you on',
     association: 'рЕзиковий',
   },
   { id: 29, en: 'passionate', ua: 'пристрасний', context: '', association: '' },
   { id: 30, en: 'affair', ua: 'справа', context: '', association: '' },
   { id: 31, en: 'parcel', ua: 'посилка', context: '', association: '' },
-  { id: 32, en: 'greed', ua: 'жадібність', context: '', association: '' },
+  {
+    id: 32,
+    en: 'greed',
+    ua: 'жадібність',
+    context:
+      'So tell me why you`ve choosen me Don`t want your grip, don`t want your greed',
+    association: 'гроші жадібно гріб',
+  },
   { id: 33, en: 'awful', ua: 'жахливий', context: '', association: '' },
   { id: 34, en: 'crap', ua: 'лайно', context: '', association: '' },
   { id: 35, en: 'pranks', ua: 'пустощі', context: '', association: '' },
@@ -310,7 +384,13 @@ const dbEn = [
   { id: 114, en: 'pit', ua: 'яма', context: '', association: '' },
   { id: 115, en: 'wristband', ua: 'браслет', context: '', association: '' },
   { id: 116, en: 'aisle', ua: 'приділ', context: '', association: '' },
-  { id: 117, en: 'jealous', ua: 'ревнивий', context: '', association: '' },
+  {
+    id: 117,
+    en: 'jealous',
+    ua: 'ревнивий',
+    context: 'Oh no, I didn`t want to hurt you I`m just a jealous guy',
+    association: 'жалюзі для підглядання з боку ревнивця',
+  },
   { id: 118, en: 'envious', ua: 'заздрісний', context: '', association: '' },
   {
     id: 119,
@@ -408,7 +488,7 @@ const dbEn = [
     en: 'underestimate',
     ua: 'недооцінювати',
     context:
-      'Don`t underestimateYour heart is never lateAnd love will always find a way',
+      'Don`t underestimate Your heart is never late And love will always find a way',
     association: 'підоцінка',
   },
   {
@@ -887,7 +967,7 @@ const dbEn = [
   },
   { id: 248, en: 'semicolon', ua: ';', context: ';', association: '' },
   { id: 249, en: 'comma', ua: ',', context: ',', association: '' },
-  { id: 250, en: 'quotes', ua: '', context: '', association: '' },
+  { id: 250, en: 'quotes', ua: '""', context: '""', association: '' },
   {
     id: 251,
     en: 'suspend',
@@ -1055,7 +1135,7 @@ const dbEn = [
     en: 'precise',
     ua: 'точний, чіткий',
     context:
-      'PremeditatedCalculated, preciseCreated cases based on racesExchanging life for lies, exchanging life for lies',
+      'Premeditated Calculated, precise Created cases based on races Exchanging life for lies, exchanging life for lies',
     association: 'пре сайз - примірили розмір',
   },
   {
@@ -1195,7 +1275,7 @@ const dbEn = [
     id: 294,
     en: 'pale',
     ua: 'блідий, слабкий, межа, огорожа',
-    context: 'Is something wrong?You`re looking kind of pale',
+    context: 'Is something wrong? You`re looking kind of pale',
     association: 'спалився і побілів',
   },
   {
@@ -1296,7 +1376,7 @@ const dbEn = [
     context: '',
     association: '',
   },
-  { id: 309, en: 'nudity', ua: 'нагота', context: '', association: '' },
+  { id: 309, en: 'nudity', ua: 'нагота', context: '', association: 'нудист' },
   { id: 310, en: 'humiliate', ua: 'принижувати', context: '', association: '' },
   {
     id: 311,
@@ -1606,7 +1686,8 @@ const dbEn = [
     id: 357,
     en: 'gap',
     ua: 'розрив, діра, пробоїна, пробіл',
-    context: '',
+    context:
+      'gap property in CSS Grid makes it easy to control spacing between rows and columns without extra margins',
     association: 'гепнув так, що діру пробив',
   },
   {
@@ -1642,21 +1723,23 @@ const dbEn = [
     id: 362,
     en: 'shorthand',
     ua: 'скорочення',
-    context: '',
+    context:
+      'const { name, age } = user is a shorthand for extracting properties from an object in JS.',
     association: 'скорочена робота для рук',
   },
   {
     id: 363,
     en: 'swap',
     ua: 'обмін, міняти',
-    context: 'swap the values of a and b',
+    context: 'swap the values of a and b',
     association: 'заміна з воплями',
   },
   {
     id: 364,
     en: 'patience',
     ua: 'терпіння, витримка',
-    context: '',
+    context:
+      'Debugging a complex state issue in React requires  patience and careful attention to detail.',
     association: 'пацієнт, терплячий біль',
   },
   {
@@ -1677,7 +1760,8 @@ const dbEn = [
     id: 367,
     en: 'borrow',
     ua: 'позичати, боргувати',
-    context: '',
+    context:
+      'borrow methods like Array.prototype.map to work on array-like objects',
     association: 'борг',
   },
   {
@@ -1705,7 +1789,8 @@ const dbEn = [
     id: 371,
     en: 'asset',
     ua: 'актив, цінність',
-    context: '',
+    context:
+      'Optimizing your static assets like images and CSS files can significantly improve web performance',
     association: 'цінна касета',
   },
   {
@@ -1747,7 +1832,8 @@ const dbEn = [
     id: 377,
     en: 'respectively',
     ua: 'відповідно',
-    context: '',
+    context:
+      'const [state, setState] = useState(), the variables represent the state value and its updater function, respectively',
     association: 'респект відповідно до кожного',
   },
   {
@@ -1796,17 +1882,26 @@ const dbEn = [
     id: 384,
     en: 'provide',
     ua: 'забезпечити, надати',
-    context: '',
+    context:
+      'React Context API allows you to provide data to components without passing props through every level',
     association: 'провайдер надає інтернет',
   },
   {
     id: 385,
     en: 'typo',
     ua: 'одрук',
-    context: '',
+    context:
+      'A single typo in a variable name can lead to hard-to-debug errors in your code',
     association: 'типу помилився…',
   },
-  { id: 386, en: 'axis', ua: 'вісь', context: '', association: '' },
+  {
+    id: 386,
+    en: 'axis',
+    ua: 'вісь',
+    context:
+      'Chart libraries often require you to define the X and Y axis when visualizing data',
+    association: '',
+  },
   {
     id: 387,
     en: 'via',
@@ -1832,7 +1927,8 @@ const dbEn = [
     id: 390,
     en: 'leap',
     ua: 'стрибок, різка зміна, перешкода',
-    context: '',
+    context:
+      'Migrating a large project from class components to hooks is a significant leap in modernizing your codebase',
     association: 'відлип і стрибнув через перешкоду',
   },
   {
@@ -2157,7 +2253,7 @@ const dbEn = [
     id: 436,
     en: 'whereas',
     ua: 'тоді як, оскільки',
-    context: 'var is globally scoped whereas let and const are block scoped',
+    context: 'var is globally scoped whereas let and const are block scoped',
     association: 'де як',
   },
   {
@@ -2263,7 +2359,7 @@ const dbEn = [
     id: 451,
     en: 'clarity',
     ua: 'прозорість, чистота, ясність',
-    context: 'moment of clarity',
+    context: 'moment of clarity',
     association: 'Клара чиста і ясна прийшла з бані',
   },
   {
@@ -2298,7 +2394,7 @@ const dbEn = [
     id: 456,
     en: 'eliminate',
     ua: 'ліквідувати, знищувати, ігнорувати',
-    context: 'The rest parameter eliminates the need to check the args array ',
+    context: 'The rest parameter eliminates the need to check the args array ',
     association: 'ліквідувати через ілюмінатор',
   },
   {
@@ -2356,7 +2452,7 @@ const dbEn = [
     id: 464,
     en: 'rid',
     ua: 'позбутися, прибрати, викорчувати',
-    context: 'Get rid of the stats, and see if you can destructure it.',
+    context: 'Get rid of the stats, and see if you can destructure it.',
     association: 'рідагуючи - позбуваємось помилок',
   },
   {
@@ -2378,7 +2474,7 @@ const dbEn = [
     id: 467,
     en: 'instantiate',
     ua: 'створити екземпляр',
-    context: 'using the new keyword to instantiate the object',
+    context: 'using the new keyword to instantiate the object',
     association: 'новий екземпляр мене в інштаграмі',
   },
   {
@@ -2471,7 +2567,7 @@ const dbEn = [
     id: 481,
     en: 'wildcard',
     ua: 'символ підстановки',
-    context: 'you can save time using the wildcard character: .',
+    context: 'you can save time using the wildcard character: .',
     association: 'дика картка',
   },
   {
@@ -2485,7 +2581,7 @@ const dbEn = [
     id: 483,
     en: 'hyphen',
     ua: 'дефіс',
-    context: 'hyphen character: -.',
+    context: 'hyphen character: -.',
     association: 'хайпова-курка пишеться через дефіс.',
   },
   {
@@ -2590,7 +2686,7 @@ const dbEn = [
     id: 498,
     en: 'caboose',
     ua: 'камбуз, гальмовий вагон',
-    context: 'the last car on a train is the caboose',
+    context: 'the last car on a train is the caboose',
     association: '',
   },
   {
@@ -2953,7 +3049,7 @@ const dbEn = [
     en: 'constrain',
     ua: 'обмеження',
     context:
-      'Dear Chasey LainI wrote to constrainThis letter is my lastAs your biggest fanI must demandYou let me eat your ass',
+      'Dear Chasey Lain I wrote to constrain This letter is my last As your biggest fan I must demand You let me eat your ass',
     association: 'ми не можемо вийти за обмеження конструкції',
   },
   {
@@ -3009,7 +3105,7 @@ const dbEn = [
     id: 558,
     en: 'processing',
     ua: 'обробка',
-    context: 'reduce method allows for more general forms of array processing',
+    context: 'reduce method allows for more general forms of array processing',
     association: 'процес обробки',
   },
   {
@@ -3872,7 +3968,7 @@ const dbEn = [
     en: 'dime',
     ua: 'копійки',
     context:
-      'My rhymes score dimes ain`t nothing you can doIt`s hard to clap with your dick in your hand, dude',
+      'My rhymes score dimes ain`t nothing you can do It`s hard to clap with your dick in your hand, dude',
     association: 'дай мені копійку',
   },
   {
@@ -4246,7 +4342,7 @@ const dbEn = [
     en: 'constrain',
     ua: 'обмеження',
     context:
-      'Dear Chasey LainI wrote to constrainThis letter is my lastAs your biggest fanI must demandYou let me eat your ass',
+      'Dear Chasey Lain I wrote to constrain This letter is my last As your biggest fan I must demand You let me eat your ass',
     association: 'ми не можемо вийти за обмеження конструкції',
   },
 ];
