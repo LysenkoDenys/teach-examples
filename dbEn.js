@@ -42,7 +42,7 @@ const dbEn = [
     id: 6,
     en: 'get stuck',
     ua: 'застрягли',
-    context: 'I am stuck',
+    context: 'help me, I am stuck! I can`t figure it out.',
     association: 'рука застрягла а стакані',
   },
   {
@@ -160,7 +160,7 @@ const dbEn = [
     en: 'reckless',
     ua: 'необачний, безрозсудний',
     context:
-      'On and on, reckless abandon Something`s wrong, this is gonna shock them Nothing to hold on to We`ll use this song to lead you on',
+      'On and on, reckless abandon_Something`s wrong, this is gonna shock them_Nothing to hold on to_We`ll use this song to lead you on',
     association: 'рЕзиковий',
   },
   { id: 29, en: 'passionate', ua: 'пристрасний', context: '', association: '' },
@@ -184,7 +184,14 @@ const dbEn = [
   { id: 40, en: 'trap-door', ua: 'люк', context: '', association: '' },
   { id: 41, en: 'parsley', ua: 'петрушка', context: '', association: '' },
   { id: 42, en: 'bloated', ua: 'роздутий', context: '', association: '' },
-  { id: 43, en: 'scorn', ua: 'зневажати', context: '', association: '' },
+  {
+    id: 43,
+    en: 'scorn',
+    ua: 'зневажати',
+    context:
+      'Walking these dirty streets_With hate in my mind_Feeling the scorn of the world_I won`t follow rules',
+    association: 'скорених зневажають',
+  },
   {
     id: 44,
     en: 'furious',
@@ -531,7 +538,14 @@ const dbEn = [
     association: 'флудити в чаті - додавати води в чисту інформацію',
   },
   { id: 165, en: 'rebates', ua: 'знижки', context: '', association: '' },
-  { id: 166, en: 'gaze', ua: 'вдивлятися', context: '', association: '' },
+  {
+    id: 166,
+    en: 'gaze',
+    ua: 'вдивлятися',
+    context:
+      'I can barely remember my past; Everything seems to disappear so fast; But I recall being jealous and alone; Gazing at the dreams going by',
+    association: 'газель вдивляється в далину щоб не стати здобиччю',
+  },
   { id: 167, en: 'drool', ua: 'сочитися', context: '', association: '' },
   { id: 168, en: 'obviously', ua: 'очевидно', context: '', association: '' },
   {
@@ -856,7 +870,7 @@ const dbEn = [
     id: 232,
     en: 'bunch of',
     ua: 'купа',
-    context: 'bunch of isolatet comonents',
+    context: 'bunch of isolatet components, bunch of keys',
     association: 'купа каміння в бані',
   },
   {
@@ -1780,9 +1794,9 @@ const dbEn = [
   },
   {
     id: 370,
-    en: 'tremendouslyly',
-    ua: 'надзвичайно',
-    context: '',
+    en: 'tremendously',
+    ua: 'надзвичайно, неймовірно',
+    context: 'Her performance improved tremendously after additional training.',
     association: 'тремтить ДОС від надзвичайного морозу',
   },
   {
@@ -1934,9 +1948,11 @@ const dbEn = [
   {
     id: 391,
     en: 'concern',
-    ua: 'заклопотаність, важливість, занепокоєння, концерн',
-    context: '',
-    association: '',
+    ua: 'заклопотаність, важливість, занепокоєння, концерн, відповідальність',
+    context:
+      'it`s a good idea to break reducers into multiple reducer functions to separate concerns.',
+    association:
+      'концерн атб несе відпвідальність за свої продукти і роздяляє її з постачальниками',
   },
   {
     id: 392,
@@ -4344,6 +4360,49 @@ const dbEn = [
     context:
       'Dear Chasey Lain I wrote to constrain This letter is my last As your biggest fan I must demand You let me eat your ass',
     association: 'ми не можемо вийти за обмеження конструкції',
+  },
+  {
+    id: 736,
+    en: 'cautious',
+    ua: 'обережний',
+    context: 'cautious driver avoids road accidents',
+    association: 'кошовий атаман діє обережно для збереження людей',
+  },
+  {
+    id: 737,
+    en: 'integrity',
+    ua: 'цілісність',
+    context: 'make classes privat in Python contributes data integrity',
+    association: 'integer - ціле число',
+  },
+  {
+    id: 738,
+    en: 'astray',
+    ua: 'заблукав, заблукавший',
+    context: 'astray in the forest - call for halp, scream: "A-u-u-u"',
+    association: 'заблукав в астрахані',
+  },
+  {
+    id: 739,
+    en: 'commitment',
+    ua: 'зобов`язання',
+    context:
+      'Maybe I`m afraid of commitment_Maybe you`re too distracted to see that_Sometimes I don`t feel_The same way as you feel',
+    association: 'комітет бере на себе обов`язки по охороні людей',
+  },
+  {
+    id: 740,
+    en: 'stale',
+    ua: 'несвіжий, застарілий',
+    context: 'Force a re-render by ensuring data is not stale',
+    association: 'сала річка - вода не свіжа',
+  },
+  {
+    id: 741,
+    en: 'brag',
+    ua: 'вихвалятися',
+    context: 'He was not the kind of man to make a brag',
+    association: 'брага примушує тебе вихвалятися',
   },
 ];
 
