@@ -4404,6 +4404,21 @@ const dbEn = [
     context: 'He was not the kind of man to make a brag',
     association: 'брага примушує тебе вихвалятися',
   },
+  {
+    id: 742,
+    en: 'liabilities',
+    ua: 'зобов`язання, пасиви',
+    context: 'He was not the kind of man to make a brag',
+    association:
+      'The company`s liabilities exceeded its assets, leading to bankruptcy	спроможність лаятися за зобов`язання',
+  },
+  {
+    id: 743,
+    en: 'density',
+    ua: 'щільність',
+    context: 'density - the quantity of mass per unit volume of a substance',
+    association: 'щільні танці',
+  },
 ];
 
 export default dbEn;
