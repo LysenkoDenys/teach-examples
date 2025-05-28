@@ -75,12 +75,18 @@ const dbEn = [
       'The damp bread began to grow mold after being left out for several days.',
     association: 'молдавани робили ремонт, через рік стіни поцівли',
   },
-  { id: 11, en: 'teensy', ua: 'крихітний', context: '', association: '' },
+  {
+    id: 11,
+    en: 'teensy',
+    ua: 'крихітний',
+    context: 'The kitten was so teensy it could fit in my pocket.',
+    association: '',
+  },
   {
     id: 12,
     en: 'fumes',
     ua: 'чад',
-    context: 'The car’s engine released thick black fumes into the air.',
+    context: 'The car`s engine released thick black fumes into the air.',
     association: 'фу-смесь',
   },
   {
@@ -90,8 +96,20 @@ const dbEn = [
     context: 'The faucet in the kitchen was dripping all night, wasting water.',
     association: '',
   },
-  { id: 14, en: 'suspicious', ua: 'підозрілий', context: '', association: '' },
-  { id: 15, en: 'banish', ua: 'відганяти', context: '', association: '' },
+  {
+    id: 14,
+    en: 'suspicious',
+    ua: 'підозрілий',
+    context: 'He gave me a suspicious look and walked away quickly.',
+    association: '',
+  },
+  {
+    id: 15,
+    en: 'banish',
+    ua: 'відганяти, банити',
+    context: 'They tried to banish negative thoughts from their minds.',
+    association: '',
+  },
   {
     id: 16,
     en: 'tap',
@@ -129,7 +147,14 @@ const dbEn = [
       'The edge of the city was lined with makeshift shanties built from scrap wood and metal.',
     association: '',
   },
-  { id: 21, en: 'brat', ua: 'кодло', context: '', association: '' },
+  {
+    id: 21,
+    en: 'brat',
+    ua: 'кодло, капосник, негідник',
+    context:
+      'That little brat broke my phone on purpose. He even laughed about it.',
+    association: '',
+  },
   {
     id: 22,
     en: 'precious',
@@ -152,9 +177,27 @@ const dbEn = [
     context: 'total recall',
     association: 'перевиклик',
   },
-  { id: 25, en: 'nourished', ua: 'нагодовані', context: '', association: '' },
-  { id: 26, en: 'harden', ua: 'укріпляти', context: '', association: '' },
-  { id: 27, en: 'outcome', ua: 'результат', context: '', association: '' },
+  {
+    id: 25,
+    en: 'nourished',
+    ua: 'нагодовані',
+    context: 'The children looked healthy and well-nourished.',
+    association: '',
+  },
+  {
+    id: 26,
+    en: 'harden',
+    ua: 'укріпляти',
+    context: 'Years of hardship hardened him. He didn`t trust anyone anymore.',
+    association: '',
+  },
+  {
+    id: 27,
+    en: 'outcome',
+    ua: 'результат',
+    context: 'The outcome of the match surprised everyone. It was 11:0.',
+    association: '',
+  },
   {
     id: 28,
     en: 'reckless',
@@ -163,9 +206,29 @@ const dbEn = [
       'On and on, reckless abandon_Something`s wrong, this is gonna shock them_Nothing to hold on to_We`ll use this song to lead you on',
     association: 'рЕзиковий',
   },
-  { id: 29, en: 'passionate', ua: 'пристрасний', context: '', association: '' },
-  { id: 30, en: 'affair', ua: 'справа', context: '', association: '' },
-  { id: 31, en: 'parcel', ua: 'посилка', context: '', association: '' },
+  {
+    id: 29,
+    en: 'passionate',
+    ua: 'пристрасний',
+    context:
+      'She`s passionate about music. She plays the violin every day with joy.',
+    association: '',
+  },
+  {
+    id: 30,
+    en: 'affair',
+    ua: 'справа, інцидент',
+    context: 'The whole affair ended badly. Everyone involved lost their jobs.',
+    association: '',
+  },
+  {
+    id: 31,
+    en: 'parcel',
+    ua: 'посилка',
+    context:
+      'I received a parcel this morning. It was full of homemade cookies.',
+    association: '',
+  },
   {
     id: 32,
     en: 'greed',
@@ -174,16 +237,81 @@ const dbEn = [
       'So tell me why you`ve choosen me Don`t want your grip, don`t want your greed',
     association: 'гроші жадібно гріб',
   },
-  { id: 33, en: 'awful', ua: 'жахливий', context: '', association: '' },
-  { id: 34, en: 'crap', ua: 'лайно', context: '', association: '' },
-  { id: 35, en: 'pranks', ua: 'пустощі', context: '', association: '' },
-  { id: 36, en: 'cogent', ua: 'переконливий', context: '', association: '' },
-  { id: 37, en: 'abhorrent', ua: 'огидний', context: '', association: '' },
-  { id: 38, en: 'racy', ua: 'колоритний', context: '', association: '' },
-  { id: 39, en: 'sustain', ua: 'підтримувати', context: '', association: '' },
-  { id: 40, en: 'trap-door', ua: 'люк', context: '', association: '' },
-  { id: 41, en: 'parsley', ua: 'петрушка', context: '', association: '' },
-  { id: 42, en: 'bloated', ua: 'роздутий', context: '', association: '' },
+  {
+    id: 33,
+    en: 'awful',
+    ua: 'жахливий',
+    context: 'That movie was awful. I left the cinema halfway through.',
+    association: '',
+  },
+  {
+    id: 34,
+    en: 'crap',
+    ua: 'лайно',
+    context: 'This computer is total crap. It crashes every 5 minutes.',
+    association: '',
+  },
+  {
+    id: 35,
+    en: 'pranks',
+    ua: 'пустощі, витівки',
+    context:
+      'They played pranks on April Fool`s Day. One was putting salt in the sugar jar.',
+    association: '',
+  },
+  {
+    id: 36,
+    en: 'cogent',
+    ua: 'переконливий',
+    context:
+      'Her speech was cogent and well-structured. Everyone voted for her idea.',
+    association: '',
+  },
+  {
+    id: 37,
+    en: 'abhorrent',
+    ua: 'огидний, відразливий',
+    context:
+      'Animal cruelty is abhorrent to me. I can`t even watch videos about it.',
+    association: '',
+  },
+  {
+    id: 38,
+    en: 'racy',
+    ua: 'колоритний, пікантний',
+    context: 'The book was a bit racy. It had bold jokes and romantic scenes.',
+    association: '',
+  },
+  {
+    id: 39,
+    en: 'sustain',
+    ua: 'підтримувати',
+    context:
+      'We need clean air and water to sustain life. Without them, we`d die.',
+    association: '',
+  },
+  {
+    id: 40,
+    en: 'trap-door',
+    ua: 'люк',
+    context:
+      'He escaped through a trap-door under the carpet. No one noticed at first.',
+    association: '',
+  },
+  {
+    id: 41,
+    en: 'parsley',
+    ua: 'петрушка',
+    context: 'I added fresh parsley to the soup. It made it taste amazing.',
+    association: 'елвіс преслі співає з петрушкою замість мікрофону',
+  },
+  {
+    id: 42,
+    en: 'bloated',
+    ua: 'роздутий',
+    context: 'After the huge meal, I felt bloated. I could barely move.',
+    association: '',
+  },
   {
     id: 43,
     en: 'scorn',
@@ -199,7 +327,14 @@ const dbEn = [
     context: 'fast and furious',
     association: 'розлючена фурія',
   },
-  { id: 45, en: 'embracing', ua: 'охоплює', context: '', association: '' },
+  {
+    id: 45,
+    en: 'embracing',
+    ua: 'охоплює',
+    context:
+      'The painting is embracing all colors of the rainbow. It looks magical.',
+    association: '',
+  },
   {
     id: 46,
     en: 'assign',
@@ -211,11 +346,25 @@ const dbEn = [
     id: 47,
     en: 'mandatory',
     ua: 'обов`язковий',
-    context: '',
+    context:
+      'Wearing a helmet is mandatory on this construction site. It`s for your safety.',
     association: 'мандатний депутат, який обов`язковий для голосування',
   },
-  { id: 48, en: 'arcana', ua: 'таємниці', context: '', association: '' },
-  { id: 49, en: 'dormant', ua: 'бездіяльний', context: '', association: '' },
+  {
+    id: 48,
+    en: 'arcana',
+    ua: 'таємниці',
+    context: 'The magician revealed ancient arcana. The audience was stunned.',
+    association: '',
+  },
+  {
+    id: 49,
+    en: 'dormant',
+    ua: 'бездіяльний',
+    context:
+      'The volcano has been dormant for decades. But scientists are still cautious.',
+    association: '',
+  },
   {
     id: 50,
     en: 'offended',
@@ -230,32 +379,111 @@ const dbEn = [
     context: 'abandoned barges sunk in ooze',
     association: 'вузька дірка, через яку витікає липкий бруд',
   },
-  { id: 52, en: 'currently', ua: 'в даний час', context: '', association: '' },
+  {
+    id: 52,
+    en: 'currently',
+    ua: 'в даний час',
+    context: 'I`m currently reading a great book. It`s hard to put it down.',
+    association: '',
+  },
   {
     id: 53,
     en: 'wreaking havoc',
-    ua: 'мстилися',
-    context: '',
+    ua: 'сіють хаос',
+    context:
+      'The villains are wreaking havoc in the city. Everything is on fire!',
     association: '',
   },
-  { id: 54, en: 'dolts', ua: 'бовдури', context: '', association: '' },
-  { id: 55, en: 'gnawing', ua: 'гризти', context: '', association: '' },
-  { id: 56, en: 'broom', ua: 'мітла', context: '', association: '' },
-  { id: 57, en: 'tether', ua: 'прив`язь', context: '', association: '' },
-  { id: 58, en: 'civic', ua: 'цивільний', context: '', association: '' },
+  {
+    id: 54,
+    en: 'dolts',
+    ua: 'бовдури',
+    context: 'Only dolts would believe that story. It makes no sense at all.',
+    association: '',
+  },
+  {
+    id: 55,
+    en: 'gnawing',
+    ua: 'гризти',
+    context:
+      'The mouse kept gnawing on the wooden chair. It left tiny bite marks.',
+    association: '',
+  },
+  {
+    id: 56,
+    en: 'broom',
+    ua: 'мітла',
+    context:
+      'She grabbed the broom and started sweeping the floor. Dust flew everywhere.',
+    association: '',
+  },
+  {
+    id: 57,
+    en: 'tether',
+    ua: 'прив`язь',
+    context: 'The dog was secured with a tether. It couldn`t run away.',
+    association: '',
+  },
+  {
+    id: 58,
+    en: 'civic',
+    ua: 'цивільний',
+    context:
+      'Civic responsibility is important. We all have a role in society.',
+    association: '',
+  },
   {
     id: 59,
     en: 'regardless',
     ua: 'незважаючи на',
-    context: '',
+    context:
+      'He continued his speech regardless of the noise. He stayed focused.',
     association: '',
   },
-  { id: 60, en: 'permission', ua: 'дозвіл', context: '', association: '' },
-  { id: 61, en: 'regain', ua: 'повернути собі', context: '', association: '' },
-  { id: 62, en: 'begat', ua: 'породив', context: '', association: '' },
-  { id: 63, en: 'evolve', ua: 'еволюціонувати', context: '', association: '' },
-  { id: 64, en: 'apparently', ua: 'мабуть', context: '', association: '' },
-  { id: 65, en: 'fellow', ua: 'хлопець', context: '', association: '' },
+  {
+    id: 60,
+    en: 'permission',
+    ua: 'дозвіл',
+    context:
+      'I need your permission to enter the building. It`s a restricted area.',
+    association: '',
+  },
+  {
+    id: 61,
+    en: 'regain',
+    ua: 'повернути собі',
+    context:
+      'After resting, he managed to regain his strength. He stood up slowly.',
+    association: '',
+  },
+  {
+    id: 62,
+    en: 'begat',
+    ua: 'породив',
+    context: 'The king begat three sons. Each of them ruled a different land.',
+    association: '',
+  },
+  {
+    id: 63,
+    en: 'evolve',
+    ua: 'еволюціонувати',
+    context: 'Species evolve over time. It`s part of natural selection.',
+    association: '',
+  },
+  {
+    id: 64,
+    en: 'apparently',
+    ua: 'мабуть',
+    context: 'Apparently, she didn`t get the message. That`s why she was late.',
+    association: '',
+  },
+  {
+    id: 65,
+    en: 'fellow',
+    ua: 'хлопець',
+    context: 'He`s a good fellow. Always ready to help others.',
+    association: '',
+  },
   { id: 66, en: 'explore', ua: 'досліджувати', context: '', association: '' },
   { id: 67, en: 'mention', ua: 'згадати', context: '', association: '' },
   {
@@ -1767,7 +1995,7 @@ const dbEn = [
     id: 366,
     en: 'certain',
     ua: 'певний, відомий, безсумнівний',
-    context: 'certain мфдгу',
+    context: 'There are certain rules that we must follow in the office.',
     association: 'певний сьогун',
   },
   {
@@ -1783,7 +2011,7 @@ const dbEn = [
     en: 'obtain',
     ua: 'отримати, бути визнаним',
     context: 'iterator is used to obtain the values to be iterated',
-    association: 'Обштейн був визнаним і отримав нобелівську премію',
+    association: 'Обштейн був визнаним і отримав шнобелівську премію',
   },
   {
     id: 369,
@@ -2574,9 +2802,10 @@ const dbEn = [
   },
   {
     id: 480,
-    en: 'intership',
+    en: 'internship',
     ua: 'стажування',
-    context: '',
+    context:
+      'This internship in the GOOGLE will help me gain practical experience in web development.',
     association: 'інтернатура',
   },
   {
@@ -4387,7 +4616,7 @@ const dbEn = [
     en: 'commitment',
     ua: 'зобов`язання',
     context:
-      'Maybe I`m afraid of commitment_Maybe you`re too distracted to see that_Sometimes I don`t feel_The same way as you feel',
+      'Maybe I`m afraid of commitment_Maybe you`re too distractedto see that_Sometimes I don`t feel_The same way as you feel',
     association: 'комітет бере на себе обов`язки по охороні людей',
   },
   {
@@ -4408,9 +4637,9 @@ const dbEn = [
     id: 742,
     en: 'liabilities',
     ua: 'зобов`язання, пасиви',
-    context: 'He was not the kind of man to make a brag',
-    association:
-      'The company`s liabilities exceeded its assets, leading to bankruptcy	спроможність лаятися за зобов`язання',
+    context:
+      'The company`s liabilities exceeded its assets, leading to bankruptcy',
+    association: 'спроможність лаятися за зобов`язання',
   },
   {
     id: 743,
@@ -4418,6 +4647,13 @@ const dbEn = [
     ua: 'щільність',
     context: 'density - the quantity of mass per unit volume of a substance',
     association: 'щільні танці',
+  },
+  {
+    id: 744,
+    en: 'dodge',
+    ua: 'ухилятися, прийом, фінт, обман, хитрість',
+    context: 'He dodged the ball just in time',
+    association: 'ухилянт їхав на новому Доджі',
   },
 ];
 
