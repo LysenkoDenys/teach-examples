@@ -828,12 +828,33 @@ const dbEn = [
     id: 113,
     en: 'embarrassing',
     ua: 'скрутний, соромно',
-    context: '',
+    context:
+      'It was so embarrassing when my code failed during the demo. I turned red from shame.',
     association: 'соромно емпатично трясти дупою в барі',
   },
-  { id: 114, en: 'pit', ua: 'яма', context: '', association: '' },
-  { id: 115, en: 'wristband', ua: 'браслет', context: '', association: '' },
-  { id: 116, en: 'aisle', ua: 'приділ', context: '', association: '' },
+  {
+    id: 114,
+    en: 'pit',
+    ua: 'яма',
+    context: 'He fell into a deep pit while hiking. It was hard to climb out.',
+    association: '',
+  },
+  {
+    id: 115,
+    en: 'wristband',
+    ua: 'браслет',
+    context:
+      'I scanned my wristband to enter the coworking space. It works like an access card.',
+    association: '',
+  },
+  {
+    id: 116,
+    en: 'aisle',
+    ua: 'приділ',
+    context:
+      'She walked down the grocery store aisle looking for snacks. It was near the drinks section.',
+    association: '',
+  },
   {
     id: 117,
     en: 'jealous',
@@ -841,41 +862,107 @@ const dbEn = [
     context: 'Oh no, I didn`t want to hurt you I`m just a jealous guy',
     association: 'жалюзі для підглядання з боку ревнивця',
   },
-  { id: 118, en: 'envious', ua: 'заздрісний', context: '', association: '' },
+  {
+    id: 118,
+    en: 'envious',
+    ua: 'заздрісний',
+    context:
+      'I felt envious of her clean and elegant code. Mine was a mess in comparison.',
+    association: '',
+  },
   {
     id: 119,
     en: 'bail on',
     ua: 'під заставу на',
-    context: '',
+    context:
+      'Don’t bail on the meeting again, we need your input. You’ve missed the last three!',
     association: '',
   },
-  { id: 120, en: 'generously', ua: 'щедро', context: '', association: '' },
-  { id: 121, en: 'perform', ua: 'виконувати', context: '', association: '' },
-  { id: 122, en: 'proper', ua: 'правильний', context: '', association: '' },
+  {
+    id: 120,
+    en: 'generously',
+    ua: 'щедро',
+    context:
+      'He generously donated his time to mentor junior devs. He really went the extra mile.',
+    association: '',
+  },
+  {
+    id: 121,
+    en: 'perform',
+    ua: 'виконувати',
+    context:
+      'The server can perform 1,000 requests per second. That’s quite efficient.',
+    association: '',
+  },
+  {
+    id: 122,
+    en: 'proper',
+    ua: 'правильний',
+    context:
+      'You need a proper closing tag in HTML. Otherwise, the page might break.',
+    association: '',
+  },
   {
     id: 123,
     en: 'parking lot',
     ua: 'стоянка для машин',
-    context: '',
+    context:
+      'I lost my car in the parking lot after the conference. It took 20 minutes to find it.',
     association: '',
   },
-  { id: 124, en: 'buck', ua: 'долар', context: '', association: '' },
-  { id: 125, en: 'enthralling', ua: 'захоплює', context: '', association: '' },
-  { id: 126, en: 'exclaim', ua: 'вигукувати', context: '', association: '' },
+  {
+    id: 124,
+    en: 'buck',
+    ua: 'долар',
+    context:
+      'This plugin only costs a buck. It`s a great deal for such functionality.',
+    association: '',
+  },
+  {
+    id: 125,
+    en: 'enthralling',
+    ua: 'захоплює',
+    context:
+      'The game’s story was enthralling. I couldn’t stop playing for hours.',
+    association: '',
+  },
+  {
+    id: 126,
+    en: 'exclaim',
+    ua: 'вигукувати',
+    context:
+      'It worked! she exclaimed after fixing the bug. Her voice echoed through the office.',
+    association: '',
+  },
   {
     id: 127,
     en: 'stirring',
     ua: 'перемішування',
-    context: '',
+    context:
+      'Stirring the soup slowly helps the flavor. Just like stirring a discussion helps with ideas.',
     association: '',
   },
-  { id: 128, en: 'dump', ua: 'звалище', context: '', association: '' },
-  { id: 129, en: 'cheapskate', ua: 'скнара', context: '', association: '' },
+  {
+    id: 128,
+    en: 'dump',
+    ua: 'звалище',
+    context: 'I had to dump the corrupted database. It couldn’t be salvaged.',
+    association: '',
+  },
+  {
+    id: 129,
+    en: 'cheapskate',
+    ua: 'скнара',
+    context:
+      'Don’t be such a cheapskate-just pay for the full version. It`s only $5.',
+    association: '',
+  },
   {
     id: 130,
     en: 'corncob',
     ua: 'кукурудзяний качан',
-    context: '',
+    context:
+      'He grilled a corncob over the fire. It smelled delicious and sweet.',
     association: '',
   },
   {
