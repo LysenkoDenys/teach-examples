@@ -969,23 +969,69 @@ const dbEn = [
     id: 131,
     en: 'restrict',
     ua: 'обмежувати',
-    context: '',
+    context:
+      'The admin can restrict user access to certain files. It’s for security reasons.',
     association: 'пере-більшити строгість',
   },
-  { id: 132, en: 'prevalent', ua: 'превалюючий', context: '', association: '' },
-  { id: 133, en: 'consider', ua: 'розглядати', context: '', association: '' },
-  { id: 134, en: 'recent', ua: 'недавній', context: '', association: '' },
+  {
+    id: 132,
+    en: 'prevalent',
+    ua: 'превалюючий',
+    context:
+      'Remote work is prevalent in the tech industry. Most companies support it now.',
+    association: '',
+  },
+  {
+    id: 133,
+    en: 'consider',
+    ua: 'розглядати',
+    context:
+      'You should consider using React for this app. It fits the project well.',
+    association: '',
+  },
+  {
+    id: 134,
+    en: 'recent',
+    ua: 'недавній',
+    context: 'A recent update introduced dark mode. ',
+    association: '',
+  },
   {
     id: 135,
     en: 'being a pushover',
     ua: 'будучи слабовільний',
-    context: '',
+    context: 'Stop being a pushover in meetings. Speak up when you disagree.',
     association: '',
   },
-  { id: 136, en: 'chimney', ua: 'димохід', context: '', association: '' },
-  { id: 137, en: 'mistletoe', ua: 'омела біла', context: '', association: '' },
-  { id: 138, en: 'generous', ua: 'щедрий', context: '', association: '' },
-  { id: 139, en: 'snowflake', ua: 'сніжинка', context: '', association: '' },
+  {
+    id: 136,
+    en: 'chimney',
+    ua: 'димохід',
+    context: 'Smoke came out of the chimney steadily. It looked cozy and warm.',
+    association: '',
+  },
+  {
+    id: 137,
+    en: 'mistletoe',
+    ua: 'омела біла',
+    context: 'He kissed her under the mistletoe. It`s a some kind of tree.',
+    association: '',
+  },
+  {
+    id: 138,
+    en: 'generous',
+    ua: 'щедрий',
+    context: 'She’s generous with her feedback. It always helps me improve.',
+    association: '',
+  },
+  {
+    id: 139,
+    en: 'snowflake',
+    ua: 'сніжинка',
+    context:
+      'Each snowflake in the animation is unique. Just like real ones outside the window in winter!',
+    association: '',
+  },
   {
     id: 140,
     en: 'extended',
@@ -993,25 +1039,60 @@ const dbEn = [
     context: 'extended class',
     association: '',
   },
-  { id: 141, en: 'Easter', ua: 'великодній', context: '', association: '' },
-  { id: 142, en: 'brew', ua: 'заварювати', context: '', association: '' },
-  { id: 143, en: 'scram', ua: 'котися', context: '', association: '' },
+  {
+    id: 141,
+    en: 'Easter',
+    ua: 'великодній',
+    context:
+      'The team decorated the office for Easter. There were eggs everywhere.',
+    association: '',
+  },
+  {
+    id: 142,
+    en: 'brew',
+    ua: 'заварювати',
+    context:
+      'Let’s brew some coffee before the meeting. We’ll need the energy.',
+    association: '',
+  },
+  {
+    id: 143,
+    en: 'scram',
+    ua: 'котися',
+    context: 'Scram! This server is for admins only. Go back to the homepage.',
+    association: '',
+  },
   {
     id: 144,
     en: 'load bearing wall',
     ua: 'несуча стіна',
-    context: '',
+    context:
+      'You can’t knock that down—it’s a load bearing wall. It supports the roof.',
     association: '',
   },
-  { id: 145, en: 'assume', ua: 'вважати', context: '', association: '' },
+  {
+    id: 145,
+    en: 'assume',
+    ua: 'вважати',
+    context: 'Don’t assume the user knows what to do. Add tooltips or hints.',
+    association: '',
+  },
   {
     id: 146,
     en: 'entertaining',
     ua: 'розважальний',
-    context: '',
+    context:
+      'That coding livestream was entertaining and educational. I learned a lot.',
     association: '',
   },
-  { id: 147, en: 'chirping', ua: 'стрекотіння', context: '', association: '' },
+  {
+    id: 147,
+    en: 'chirping',
+    ua: 'стрекотіння',
+    context:
+      'I heard birds chirping during our video call. It was oddly peaceful.',
+    association: '',
+  },
   {
     id: 148,
     en: 'slipped',
@@ -1032,26 +1113,94 @@ const dbEn = [
     id: 150,
     en: 'spot',
     ua: 'пляма',
-    context: '',
+    context:
+      'There’s a coffee spot on your shirt. Did you spill some this morning?',
     association: 'спітнів от і плями виступили',
   },
-  { id: 151, en: 'pacifier', ua: 'заспокоювач', context: '', association: '' },
-  { id: 152, en: 'insurance', ua: 'страхування', context: '', association: '' },
-  { id: 153, en: 'revamp', ua: 'оновлюють', context: '', association: '' },
-  { id: 154, en: 'bias', ua: 'зміщення', context: '', association: '' },
-  { id: 155, en: 'conquest', ua: 'підкорення', context: '', association: '' },
+  {
+    id: 151,
+    en: 'pacifier',
+    ua: 'заспокоювач',
+    context:
+      'The baby dropped her pacifier and started crying. We had to find it quickly.',
+    association: '',
+  },
+  {
+    id: 152,
+    en: 'insurance',
+    ua: 'страхування',
+    context:
+      'You’ll need cyber insurance for client data protection. It’s essential these days.',
+    association: '',
+  },
+  {
+    id: 153,
+    en: 'revamp',
+    ua: 'оновлюють',
+    context:
+      'They plan to revamp the website`s homepage. The old design looks outdated.',
+    association: '',
+  },
+  {
+    id: 154,
+    en: 'bias',
+    ua: 'зміщення',
+    context: 'The memory capacity is 16GB. It’s enough for most users.',
+    association: '',
+  },
+  {
+    id: 155,
+    en: 'conquest',
+    ua: 'підкорення',
+    context:
+      'The startup’s conquest of the market was swift. They became a leader in a year.',
+    association: '',
+  },
   {
     id: 156,
     en: 'capacity',
     ua: 'ємність, місткість',
-    context: '',
+    context: 'The memory capacity is 16GB. It’s enough for most users.',
     association: '',
   },
-  { id: 157, en: 'decent', ua: 'порядна', context: '', association: '' },
-  { id: 158, en: 'reveal', ua: 'розкривати', context: '', association: '' },
-  { id: 159, en: 'ominous', ua: 'загрозливий', context: '', association: '' },
-  { id: 160, en: 'reassured', ua: 'заспокоїв', context: '', association: '' },
-  { id: 161, en: 'creeping out', ua: 'вилазити', context: '', association: '' },
+  {
+    id: 157,
+    en: 'decent',
+    ua: 'порядна',
+    context: 'I’m looking for a decent job that pays well and has good hours.',
+    association: '',
+  },
+  {
+    id: 158,
+    en: 'reveal',
+    ua: 'розкривати',
+    context:
+      'Click the eye icon to reveal the password. Don’t show it in public.',
+    association: '',
+  },
+  {
+    id: 159,
+    en: 'ominous',
+    ua: 'загрозливий',
+    context: 'The silence before the crash was ominous. Something felt off.',
+    association: '',
+  },
+  {
+    id: 160,
+    en: 'reassured',
+    ua: 'заспокоїв',
+    context:
+      'The update reassured users their data is safe. They were worried.',
+    association: '',
+  },
+  {
+    id: 161,
+    en: 'creeping out',
+    ua: 'дуже лякає',
+    context:
+      'That spooky sound effect is really creeping me out. I can’t concentrate.',
+    association: '',
+  },
   {
     id: 162,
     en: 'descentdant',
@@ -1059,7 +1208,14 @@ const dbEn = [
     context: 'descentdant compontnt',
     association: 'нащадок дисидента',
   },
-  { id: 163, en: 'gibberish', ua: 'тарабарщина', context: '', association: '' },
+  {
+    id: 163,
+    en: 'gibberish',
+    ua: 'тарабарщина',
+    context:
+      'The log output was just gibberish. We couldn’t debug anything from it.',
+    association: '',
+  },
   {
     id: 164,
     en: 'flooding',
@@ -1067,7 +1223,14 @@ const dbEn = [
     context: 'we are flooding in chat',
     association: 'флудити в чаті - додавати води в чисту інформацію',
   },
-  { id: 165, en: 'rebates', ua: 'знижки', context: '', association: '' },
+  {
+    id: 165,
+    en: 'rebates',
+    ua: 'знижки',
+    context:
+      'The store offers rebates on new laptops. You can claim them online.',
+    association: '',
+  },
   {
     id: 166,
     en: 'gaze',
@@ -1076,7 +1239,13 @@ const dbEn = [
       'I can barely remember my past; Everything seems to disappear so fast; But I recall being jealous and alone; Gazing at the dreams going by',
     association: 'газель вдивляється в далину щоб не стати здобиччю',
   },
-  { id: 167, en: 'drool', ua: 'сочитися', context: '', association: '' },
+  {
+    id: 167,
+    en: 'drool',
+    ua: 'сочитися',
+    context: 'The smell of freshly baked bread made me drool instantly.',
+    association: '',
+  },
   { id: 168, en: 'obviously', ua: 'очевидно', context: '', association: '' },
   {
     id: 169,
