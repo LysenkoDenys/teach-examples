@@ -3146,21 +3146,22 @@ const dbEn = [
     id: 461,
     en: 'although',
     ua: 'хоча, незважаючи на те що',
-    context: '',
+    context: 'Although it was raining, they went hiking.',
     association: 'алсо',
   },
   {
     id: 462,
     en: 'receipt',
-    ua: 'квитанція, рецепт',
-    context: '',
+    ua: 'квитанція, рецепт, чек',
+    context:
+      'Keep the receipt for your purchase. Receipts are proof of payment.',
     association: 'рецепт',
   },
   {
     id: 463,
     en: 'comprehensive',
     ua: 'комплексний, всебічний, всеосяжний',
-    context: '',
+    context: 'Comprehensive studies cover all aspects.',
     association: 'компресорний комплекс',
   },
   {
@@ -3182,7 +3183,7 @@ const dbEn = [
     id: 466,
     en: 'under the hood',
     ua: 'під капотом',
-    context: '',
+    context: 'Check what’s under the hood before buying a car.',
     association: 'під художествами',
   },
   {
@@ -3214,7 +3215,14 @@ const dbEn = [
     context: 'Suppose you have a file',
     association: 'припустимо, що існує суп з ос',
   },
-  { id: 471, en: 'subtract', ua: 'відняти', context: '', association: '' },
+  {
+    id: 471,
+    en: 'subtract',
+    ua: 'відняти',
+    context:
+      'Subtract 5 from 10 to get 5. Subtraction is a basic math operation.',
+    association: 'під трактом',
+  },
   {
     id: 472,
     en: 'fallback',
@@ -3233,42 +3241,44 @@ const dbEn = [
     id: 474,
     en: 'reckon',
     ua: 'розраховувати, нараховувати, покладатися',
-    context: '',
+    context: 'I reckon it will rain tomorrow. Reckoning helps in planning.',
     association: 'перерахувати, що в тебе на кону',
   },
   {
     id: 475,
     en: 'settled',
     ua: 'осіли, злагоджений, постійний, заселений',
-    context: '',
+    context: 'The settlers established a new town.',
     association: 'сидить осілий заселенець',
   },
   {
     id: 476,
     en: 'circumstances',
     ua: 'обставини',
-    context: '',
+    context:
+      'Under the circumstances, we had to cancel the trip. Circumstances affect decisions.',
     association: 'циркулюючі стани',
   },
   {
     id: 477,
     en: 'bewildered',
     ua: 'збентежений',
-    context: '',
+    context:
+      'He looked bewildered after hearing the news. Bewilderment causes his confusion.',
     association: 'будь одичалим',
   },
   {
     id: 478,
     en: 'distortion',
     ua: 'спотворення, деформація, перекручення',
-    context: '',
+    context: 'The lens caused image distortion.',
     association: 'grunge tuned guitar with pedal',
   },
   {
     id: 479,
     en: 'considerate',
     ua: 'уважний, дбайливий, тактовний',
-    context: '',
+    context: 'She is always considerate of others’ feelings.',
     association: 'розглядаючий',
   },
   {
@@ -3290,7 +3300,8 @@ const dbEn = [
     id: 482,
     en: 'vowel',
     ua: 'голосний звук',
-    context: '',
+    context:
+      'The letter /a/ is a vowel. Vowels are essential in pronunciation.',
     association: 'во велончелі присутні голосні звуки',
   },
   {
@@ -3304,14 +3315,14 @@ const dbEn = [
     id: 484,
     en: 'sincere',
     ua: 'щирий',
-    context: '',
+    context: 'He gave a sincere apology. Sincerity is valued in relationships.',
     association: 'маючий сенс',
   },
   {
     id: 485,
     en: 'afterwards',
     ua: 'згодом, далі',
-    context: '',
+    context: 'Afterwards means later in time.',
     association: 'після варти',
   },
   {
