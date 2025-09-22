@@ -3329,14 +3329,15 @@ const dbEn = [
     id: 486,
     en: 'exposed',
     ua: 'піддається, викритий, виставлений',
-    context: '',
+    context: 'The rock was exposed to the sun. Exposed wires are dangerous.',
     association: 'екс позиціонований (піддався на зміщення)',
   },
   {
     id: 487,
     en: 'equation',
     ua: 'рівняння',
-    context: '',
+    context:
+      'Solve the equation to find x. Equations express relationships between variables.',
     association: 'те що еквівалентне',
   },
   {
@@ -3364,14 +3365,15 @@ const dbEn = [
     id: 491,
     en: 'tallie',
     ua: 'підрахунок',
-    context: '',
+    context: 'Keep a tallie of points scored. Tallies help track progress.',
     association: 'талія підраховує вартість жінки',
   },
   {
     id: 492,
     en: 'canvas',
     ua: 'полотно',
-    context: '',
+    context:
+      'The artist painted on canvas. Canvas is used for paintings and tents.',
     association: 'Кличко всіх клав на канвас',
   },
   {
@@ -3385,14 +3387,14 @@ const dbEn = [
     id: 494,
     en: 'pace',
     ua: 'темп',
-    context: '',
+    context: 'Maintain a steady pace while running.',
     association: 'пейси жида, який в темпі на всіх паразитує',
   },
   {
     id: 495,
     en: 'urgent',
     ua: 'терміновий, нагальний',
-    context: '',
+    context: 'Urgent calls require immediate response.',
     association: 'терміновий ургант',
   },
   {
@@ -3406,7 +3408,8 @@ const dbEn = [
     id: 497,
     en: 'abuse',
     ua: 'зловживання',
-    context: '',
+    context:
+      'She left her job after suffering emotional abuse from her manager. The abuse made her lose confidence in herself.',
     association: 'над вживання',
   },
   {
