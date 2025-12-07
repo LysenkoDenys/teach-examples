@@ -1089,6 +1089,49 @@ const dbCz = [
     context: '',
     association: '',
   },
+  {
+    id: 233,
+    cz: 'Netuším [не́тушїм]',
+    ua: 'Не знаю, не маю уявлення',
+    context: '',
+    association: '',
+  },
+  {
+    id: 234,
+    cz: 'Vůbec [ву́бєц]',
+    ua: 'Взагалі, зовсім',
+    context: '',
+    association: '',
+  },
+  {
+    id: 235,
+    cz: 'Všimněte [вшї́мнєтє]',
+    ua: 'Зверніть увагу',
+    context: '',
+    association: '',
+  },
+  {
+    id: 236,
+    cz: 'Ujde to [у́йдє то]',
+    ua: 'Зійде, піде',
+    context: '',
+    association: '',
+  },
+  {
+    id: 237,
+    cz: 'Kdy bude příště? [кди́ буде пшї́штє?]',
+    ua: 'Коли буде наступного разу?',
+    context: '',
+    association: '',
+  },
+  {
+    id: 238,
+    cz: 'Bohužel [богу́жел]',
+    ua: 'На жаль',
+    context: '',
+    association: '',
+  },
+  { id: 239, cz: 'Směr [смєр]', ua: 'Напрямок', context: '', association: '' },
 ];
 
 export default dbCz;
