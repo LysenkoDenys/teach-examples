@@ -232,6 +232,15 @@ input {
   padding-left: 8px;
 }
 
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* gap: 0.3em; */
+  flex-wrap: wrap;
+  width: 100%;
+}
+
 /* Mobile-specific styles */
 @media (max-width: 480px) {
   .inputs,
