@@ -541,7 +541,7 @@ const dbJp = [
   },
 ];
 
-console.log(dbJp[0]); //
+// console.log(dbJp[0]); //
 export default dbJp;
 
 // const dbJp = [];

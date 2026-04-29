@@ -11,7 +11,7 @@ const elements = {
   btn3Node: document.getElementById('proverb'),
   btn4Node: document.getElementById('en'),
   btn5Node: document.getElementById('cz'),
-  btn6Node: document.getElementById('jp'),
+  // btn6Node: document.getElementById('jp'),
   minimumNode: document.getElementById('min'),
   maximumNode: document.getElementById('max'),
   quantityNode: document.getElementById('qty'),
@@ -48,8 +48,8 @@ const generateExamples = (min, max, qty, operation) => {
           a + b <= max
             ? `${a} + ${b} = `
             : a > b
-            ? `${a} - ${b} = `
-            : `${b} - ${a} = `;
+              ? `${a} - ${b} = `
+              : `${b} - ${a} = `;
         break;
       case 'multiplication':
         if (a * b <= max) {
@@ -68,7 +68,7 @@ const generateExamples = (min, max, qty, operation) => {
 
     if (Date.now() - startTime > maxTime) {
       alert(
-        'Loop exited after running for more than 10 seconds because qty is greater than distinct variants'
+        'Loop exited after running for more than 10 seconds because qty is greater than distinct variants',
       );
       break;
     }
@@ -89,7 +89,7 @@ const getParameters = () => {
 
   if (quantity > 100 || maximum > 1000000) {
     alert(
-      'It is too much for you son... max quantity is 100, maximum number is 1 000 000'
+      'It is too much for you son... max quantity is 100, maximum number is 1 000 000',
     );
     return null;
   }
@@ -139,23 +139,23 @@ const toggleAnswer = (id, isAnswerShowed) => {
               .toString()
               .slice(1)
               .replace('=', '')
-              .trim()
+              .trim(),
           )
         : id >= 10 && id < 100
-        ? eval(
-            event.currentTarget.textContent
-              .toString()
-              .slice(2)
-              .replace('=', '')
-              .trim()
-          )
-        : eval(
-            event.currentTarget.textContent
-              .toString()
-              .slice(3)
-              .replace('=', '')
-              .trim()
-          );
+          ? eval(
+              event.currentTarget.textContent
+                .toString()
+                .slice(2)
+                .replace('=', '')
+                .trim(),
+            )
+          : eval(
+              event.currentTarget.textContent
+                .toString()
+                .slice(3)
+                .replace('=', '')
+                .trim(),
+            );
     example.innerHTML = `<div class='item-example-num'>${id}</div><div class='item-example'>${answer}</div>`;
     example.style.color = colors.answer;
   } else {
@@ -192,7 +192,7 @@ function updateTimerDisplay(time) {
   const minutes = Math.floor(time / 60);
   const seconds = time % 60;
   document.getElementById('timer').textContent = `${padZero(minutes)}:${padZero(
-    seconds
+    seconds,
   )}`;
 }
 
@@ -229,12 +229,12 @@ elements.btn0Node.addEventListener('click', () => {
     params.minimum,
     params.maximum,
     params.quantity,
-    'addition'
+    'addition',
   ).map((el, index) =>
     elements.olNode.insertAdjacentHTML(
       'beforeend',
-      getItemBlock(el, index, 'example')
-    )
+      getItemBlock(el, index, 'example'),
+    ),
   );
   getAnimation('addition');
 
@@ -266,12 +266,12 @@ elements.btn1Node.addEventListener('click', () => {
     params.minimum,
     params.maximum,
     params.quantity,
-    'multiplication'
+    'multiplication',
   ).map((el, index) =>
     elements.olNode.insertAdjacentHTML(
       'beforeend',
-      getItemBlock(el, index, 'example')
-    )
+      getItemBlock(el, index, 'example'),
+    ),
   );
   getAnimation('multiplication');
 
@@ -313,8 +313,8 @@ elements.btn3Node.addEventListener('click', () => {
   getRandomProverbs(quantity).map((el, index) =>
     elements.olNode.insertAdjacentHTML(
       'beforeend',
-      getItemBlock(el, index, 'proverb')
-    )
+      getItemBlock(el, index, 'proverb'),
+    ),
   );
   getAnimation('proverb');
 
@@ -371,8 +371,8 @@ elements.btn4Node.addEventListener('click', () => {
   getRandomWords(quantity).map((el, index) =>
     elements.olNode.insertAdjacentHTML(
       'beforeend',
-      getItemWordsBlock(el[0], el[1], index)
-    )
+      getItemWordsBlock(el[0], el[1], index),
+    ),
   );
   getAnimation('proverb');
 
@@ -446,8 +446,8 @@ elements.btn5Node.addEventListener('click', () => {
   getRandomWordsCz(quantity).map((el, index) =>
     elements.olNode.insertAdjacentHTML(
       'beforeend',
-      getItemWordsBlock(el[0], el[1], index)
-    )
+      getItemWordsBlock(el[0], el[1], index),
+    ),
   );
   getAnimation('proverb');
 
@@ -504,64 +504,64 @@ function getRandomWordsJp(qty = 10) {
   return shuffledWordsJp.slice(0, qty).map((item) => [item.jp, item.context]);
 }
 
-elements.btn6Node.addEventListener('click', () => {
-  const quantity = +elements.quantityNode.value || 10;
-  if (quantity <= 0) {
-    alert('quantity must be greater than zero');
-  }
-  if (quantity > 100) {
-    return alert('it is too much for you son... max quantity is 100');
-  }
-  resetTimer();
-  startTimer();
-  elements.olNode.style.display = 'flex';
-  elements.olNode.style.flexDirection = 'column';
+// elements.btn6Node.addEventListener('click', () => {
+//   const quantity = +elements.quantityNode.value || 10;
+//   if (quantity <= 0) {
+//     alert('quantity must be greater than zero');
+//   }
+//   if (quantity > 100) {
+//     return alert('it is too much for you son... max quantity is 100');
+//   }
+//   resetTimer();
+//   startTimer();
+//   elements.olNode.style.display = 'flex';
+//   elements.olNode.style.flexDirection = 'column';
 
-  elements.olNode.innerHTML = '';
-  getRandomWordsJp(quantity).map((el, index) =>
-    elements.olNode.insertAdjacentHTML(
-      'beforeend',
-      getItemWordsBlock(el[0], el[1], index)
-    )
-  );
-  getAnimation('proverb');
+//   elements.olNode.innerHTML = '';
+//   getRandomWordsJp(quantity).map((el, index) =>
+//     elements.olNode.insertAdjacentHTML(
+//       'beforeend',
+//       getItemWordsBlock(el[0], el[1], index),
+//     ),
+//   );
+//   getAnimation('proverb');
 
-  //get the ua word:
-  const exampleNodes = document.querySelectorAll('.container-item');
+//   //get the ua word:
+//   const exampleNodes = document.querySelectorAll('.container-item');
 
-  exampleNodes.forEach((node) => {
-    let isAnswerShowed = false;
-    // Store the original english word in a data attribute
-    node.dataset.originalText = node.innerText;
+//   exampleNodes.forEach((node) => {
+//     let isAnswerShowed = false;
+//     // Store the original english word in a data attribute
+//     node.dataset.originalText = node.innerText;
 
-    node.addEventListener('click', function (event) {
-      const id = event.currentTarget.id;
-      isAnswerShowed = !isAnswerShowed;
+//     node.addEventListener('click', function (event) {
+//       const id = event.currentTarget.id;
+//       isAnswerShowed = !isAnswerShowed;
 
-      const example = document.getElementById(id);
-      const originalText = example.dataset.originalText;
+//       const example = document.getElementById(id);
+//       const originalText = example.dataset.originalText;
 
-      const wordText2Find = originalText
-        .replace(/\d/g, '')
-        .replace(/context:.*/, '')
-        .trim();
-      const index = dbJp.findIndex((el) => el.jp === wordText2Find);
+//       const wordText2Find = originalText
+//         .replace(/\d/g, '')
+//         .replace(/context:.*/, '')
+//         .trim();
+//       const index = dbJp.findIndex((el) => el.jp === wordText2Find);
 
-      if (isAnswerShowed) {
-        example.innerHTML = `<div class='item-example-num'>${id}</div><div class='item-example-proverb'>${dbJp[index].ua}</div><div class='item-example-tip'>association: ${dbJp[index].association}</div>`;
-        example.style.color = colors.answer;
-      } else {
-        example.innerHTML = `<div class='item-example-num'>${id}</div><div class='item-example-proverb'>${originalText
-          .replace(/\d/g, '')
-          .replace(/context:.*/, '')
-          .trim()}</div><div class='item-example-tip'>context:${
-          dbJp[index].context
-        }</div>`;
-        example.style.color = colors.visited;
-      }
-    });
-  });
-});
+//       if (isAnswerShowed) {
+//         example.innerHTML = `<div class='item-example-num'>${id}</div><div class='item-example-proverb'>${dbJp[index].ua}</div><div class='item-example-tip'>association: ${dbJp[index].association}</div>`;
+//         example.style.color = colors.answer;
+//       } else {
+//         example.innerHTML = `<div class='item-example-num'>${id}</div><div class='item-example-proverb'>${originalText
+//           .replace(/\d/g, '')
+//           .replace(/context:.*/, '')
+//           .trim()}</div><div class='item-example-tip'>context:${
+//           dbJp[index].context
+//         }</div>`;
+//         example.style.color = colors.visited;
+//       }
+//     });
+//   });
+// });
 
 //4 reset:
 elements.btn2Node.addEventListener('click', () => {
