@@ -5140,6 +5140,77 @@ const dbEn = [
     context: 'He dodged the ball just in time',
     association: 'ухилянт їхав на новому Доджі',
   },
+  {
+    id: 745,
+    en: 'stash',
+    ua: 'запас',
+    context: ' you can see the actual changes that are stored in the stash',
+    association: 'ташка з запасами',
+  },
+  {
+    id: 746,
+    en: 'squash',
+    ua: 'стискання, кабачок',
+    context:
+      'Squashing commits means that you will take a bunch of commits and turn them into one.',
+    association: 'сквасили капусту під тиском',
+  },
+  {
+    id: 747,
+    en: 'unambiguous',
+    ua: 'однозначний',
+    context:
+      'An algorithm is a set of unambiguous instructions for solving a problem or carrying out a task.',
+    association: 'Анна Капінус була жидівкою - однозначно',
+  },
+  {
+    id: 748,
+    en: 'trade-off',
+    ua: '(компроміс, баланс) — це коли, щоб отримати перевагу в чомусь, доводиться поступитися в іншому',
+    context:
+      'However, this efficiency in finding the edges comes with a tradeoff.',
+    association: 'торгівля закінчується на компромісі',
+  },
+  {
+    id: 749,
+    en: 'sparse',
+    ua: 'рідкісний, розріджений',
+    context:
+      'This is inefficient for sparse graphs, which are graphs that only have a few edges.',
+    association: 'спаржу я їм рідко',
+  },
+  {
+    id: 750,
+    en: 'mitigate',
+    ua: 'пом`якшити',
+    context:
+      ' use of SEO-friendly URLs that can help mitigate these issues and improve SEO for SPAs',
+    association: 'Мітя це пом’якшення від Дмитра',
+  },
+  {
+    id: 751,
+    en: 'clutter',
+    ua: 'безлад',
+    context:
+      'multiple buttons in your form could clutter up the user interface.',
+    association: 'класти все на підлогу - буде безлад',
+  },
+  {
+    id: 752,
+    en: 'impaired',
+    ua: 'послаблений',
+    context:
+      'screen readers are assistive technology programs that help blind and visually impaired people use computers',
+    association: 'імперії послабляють вассалів',
+  },
+  {
+    id: 753,
+    en: 'cue',
+    ua: 'підказка',
+    context:
+      'Styling different link states is crucial for usability and accessibility, as it provides visual cues about the current state of the link',
+    association: 'ку, дядя вова',
+  },
 ];
 
 export default dbEn;
