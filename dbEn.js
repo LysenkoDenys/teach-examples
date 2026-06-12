@@ -5211,6 +5211,101 @@ const dbEn = [
       'Styling different link states is crucial for usability and accessibility, as it provides visual cues about the current state of the link',
     association: 'ку, дядя вова',
   },
+  {
+    id: 754,
+    en: 'prominent',
+    ua: 'видатний',
+    context:
+      'By using white space effectively, we can help to make a CTA button more prominent and encourage users to click on it.',
+    association: 'осяяний промінями слави видатний співак',
+  },
+  {
+    id: 755,
+    en: 'legibility',
+    ua: 'розбірливість',
+    context:
+      'Micro white space is important because it helps to improve readability and legibility, making it easier for users to scan and understand the content.',
+    association: 'легкочитаємий',
+  },
+  {
+    id: 756,
+    en: 'perceived',
+    ua: 'сприймаються',
+    context:
+      'elements that are close together are perceived as being related, while elements that are far apart are perceived as being unrelated.',
+    association: 'персики сприймаються як солодкі фрукти',
+  },
+  {
+    id: 757,
+    en: 'proximity',
+    ua: 'близкість',
+    context:
+      'When designing your web pages, you always want to be mindful of the law of proximity.',
+    association: 'проксима-центавра близька до нашої планети',
+  },
+  {
+    id: 758,
+    en: 'cohesive',
+    ua: 'цілісний, згуртований',
+    context:
+      'You want to make sure that your images are aligned with the text and other elements on your site so that it creates a cohesive design.',
+    association: 'кохайтеся та гуртуйтеся',
+  },
+  {
+    id: 759,
+    en: 'survey',
+    ua: 'опитування, оглядати, інспектувати',
+    context:
+      'This is a survey you show to your users when they cancel a subscription or delete an account.',
+    association: 'серверуємо стіл для опитування',
+  },
+  {
+    id: 760,
+    en: 'churn',
+    ua: 'відтік, мішалка',
+    context:
+      ' Data from this survey can give you insight into the factors causing user churn, so you can address them.',
+    association: 'джекі чан утік з обладунками бога',
+  },
+  {
+    id: 761,
+    en: 'harsh',
+    ua: 'жорсткий, суворий',
+    context:
+      'While this high contrast can be effective, it can also be too harsh on the eyes.',
+    association: 'жорсткий харч',
+  },
+  {
+    id: 762,
+    en: 'praise',
+    ua: 'похвала, прославлення',
+    context: 'She is praising James for his effort.',
+    association: 'набити собі ціну',
+  },
+  {
+    id: 763,
+    en: 'convey',
+    ua: 'передати, виражати',
+    context:
+      'Users can easily understand the information you are trying to convey',
+    association: 'передати під конвоєм',
+  },
+  {
+    id: 764,
+    en: 'progressive disclosure',
+    ua: 'поступове розкриття інформації',
+    context:
+      'A progressive disclosure is a design pattern used to only show users relevant content based on their current activity and hide the rest.',
+    association: 'не зачинення',
+  },
+  {
+    id: 765,
+    en: 'deliverables ',
+    ua: 'результати',
+    context:
+      'deliverables should include a list of all the items that will be produced as part of the project',
+    association: 'доставка результату до клієнта',
+  },
 ];
 
 export default dbEn;
