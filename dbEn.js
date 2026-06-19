@@ -5185,7 +5185,7 @@ const dbEn = [
     ua: 'пом`якшити',
     context:
       ' use of SEO-friendly URLs that can help mitigate these issues and improve SEO for SPAs',
-    association: 'Мітя це пом’якшення від Дмитра',
+    association: 'Мітя це пом`якшення від Дмитра',
   },
   {
     id: 751,
@@ -5305,6 +5305,60 @@ const dbEn = [
     context:
       'deliverables should include a list of all the items that will be produced as part of the project',
     association: 'доставка результату до клієнта',
+  },
+  {
+    id: 766,
+    en: 'refine',
+    ua: 'доопрацювати',
+    context:
+      'It is often a good idea to start with general styles for inputs, then refine specific types.',
+    association: 'переробити на краще',
+  },
+  {
+    id: 767,
+    en: 'perception',
+    ua: 'сприйняття',
+    context:
+      'Color theory is the study of how colors interact with each other and how they affect our perception.',
+    association: 'перфекціоністське сприйняття',
+  },
+  {
+    id: 768,
+    en: 'cozy',
+    ua: 'затишний',
+    context:
+      'Warm colors, like reds, oranges, and yellows, evoke feelings of comfort, warmth, and coziness.',
+    association: 'кози люблять затишний хлів',
+  },
+  {
+    id: 769,
+    en: 'sooth',
+    ua: 'заспокійливий',
+    context: 'create cohesive and soothing experiences',
+    association: 'сутінки заспокоюють',
+  },
+  {
+    id: 770,
+    en: 'additive',
+    ua: 'добавка',
+    context:
+      'The RGB color model is an additive color model, which means colors are created by combining light at varying intensities.',
+    association: 'додаткова добавка',
+  },
+  {
+    id: 771,
+    en: 'vivid',
+    ua: 'яскравий',
+    context: 'The saturation is 100%, so the green will be fully vivid.',
+    association: 'яскравий вивід кольору',
+  },
+  {
+    id: 772,
+    en: 'tint',
+    ua: 'відтінок',
+    context:
+      'The HSL color model is particularly useful when you need to create color schemes and adjust shades or tints easily.',
+    association: 'тінь тіні',
   },
 ];
 
